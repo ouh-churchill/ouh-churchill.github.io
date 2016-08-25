@@ -22,6 +22,7 @@ Contents
    _source/user_stories
    _source/development
    _source/BMT/index
+   _source/NHIC/index
    _source/FHIRstation/index
    _source/PancreasDB/index
    _source/TransplantEPR/index

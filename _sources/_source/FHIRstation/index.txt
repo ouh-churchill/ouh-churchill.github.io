@@ -30,11 +30,11 @@ Background research for alternative solutions:
  4. API should additionally support FHIR calls: vread, history (instance), search (instance), history (type), conformance, history (system), search (system). See [FHIR RESTful API](https://www.hl7.org/fhir/http.html) pages, in particular the [summary table](https://www.hl7.org/fhir/http.html#summary).
 
 2. Create (a resource) should:
- 1. Accept http POST request
- 2. Map the contents to an url which indicates the resource type (E.g. `http://server.org/fhir/patient`)
- 3. Accept the body’s format in Content-Type header (**a:** `application/json+fhir;charset=utf-8` and **b:** `application/xml+fhir;charset=utf-8`)
- 4. Return http status 201 (Created).
- 5. Return only the newly assigned version id URL in the Location header
+	1. Accept http POST request
+	2. Map the contents to an url which indicates the resource type (E.g. `http://server.org/fhir/patient`)
+	3. Accept the body’s format in Content-Type header (**a:** `application/json+fhir;charset=utf-8` and **b:** `application/xml+fhir;charset=utf-8`)
+	4. Return http status 201 (Created).
+	5. Return only the newly assigned version id URL in the Location header
 
 3. Update (a resource) should:
  1. Accept http PUT request

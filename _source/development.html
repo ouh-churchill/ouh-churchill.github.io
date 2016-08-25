@@ -87,11 +87,11 @@
 <li class="toctree-l1"><a class="reference internal" href="user_stories.html">User Stories</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Project Setup Notes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#creating-the-intial-project">Creating the intial project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#dev-system-notes">Dev System Notes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#fhirbase-install">FHIRbase Install</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#sphinx-install">Sphinx Install</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="#dev-system-notes">Dev System Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#fhirbase-install">FHIRbase Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sphinx-install">Sphinx Install</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="BMT/index.html">BMT Project</a></li>
@@ -177,12 +177,13 @@
 <li>Edit <code class="docutils literal"><span class="pre">manage.py</span></code> and <code class="docutils literal"><span class="pre">wsgi.py</span></code> to point at <code class="docutils literal"><span class="pre">“config.settings”</span></code></li>
 </ul>
 <p>After that, PyCharm will want a few settings tweaks (like Django support enabling, and pointing at the settings files). I tend to hold of on this until I&#8217;ve also sorted out the setup of Best Practice for settings and other folders/files that form part of the project boilerplate.</p>
-<p>http://v4-alpha.getbootstrap.com</p>
+<p><a class="reference external" href="#">http://v4-alpha.getbootstrap.com</a></p>
+</div>
 </div>
 <div class="section" id="dev-system-notes">
-<span id="dev-system-notes"></span><h2>Dev System Notes<a class="headerlink" href="#dev-system-notes" title="Permalink to this headline">¶</a></h2>
+<span id="dev-system-notes"></span><h1>Dev System Notes<a class="headerlink" href="#dev-system-notes" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="fhirbase-install">
-<span id="fhirbase-install"></span><h3>FHIRbase Install<a class="headerlink" href="#fhirbase-install" title="Permalink to this headline">¶</a></h3>
+<span id="fhirbase-install"></span><h2>FHIRbase Install<a class="headerlink" href="#fhirbase-install" title="Permalink to this headline">¶</a></h2>
 <p>On OS X 10.11.6, this has been a series of forward and backward steps.</p>
 <p>Homebrew supports the latest version of software, and one or two older versions. For FHIRbase to install locally we need the following stack:</p>
 <ul class="simple">
@@ -207,9 +208,23 @@
 </ul>
 </div>
 <div class="section" id="sphinx-install">
-<span id="sphinx-install"></span><h3>Sphinx Install<a class="headerlink" href="#sphinx-install" title="Permalink to this headline">¶</a></h3>
-<p>TBA</p>
-</div>
+<span id="sphinx-install"></span><h2>Sphinx Install<a class="headerlink" href="#sphinx-install" title="Permalink to this headline">¶</a></h2>
+<p>Sphinx is configured to create documentation outputs (<a class="reference external" href="https://github.com/ouh-churchill/diakonia/issues/39">#39</a>), and scan for django code. The html documentation is then pushed into another repository for display via GitHub pages (<a class="reference external" href="https://github.com/ouh-churchill/diakonia/issues/40">#40</a>)</p>
+<p>To publish:</p>
+<ul class="simple">
+<li>In the diakonia repo, edit your documents, and commit changes</li>
+<li>From the cli, whilst <strong>in the diakonia virtualenv</strong>:</li>
+<li><code class="docutils literal"><span class="pre">cd</span> <span class="pre">docs</span></code></li>
+<li><code class="docutils literal"><span class="pre">make</span> <span class="pre">html</span></code></li>
+<li>In another cli, we add, commit, and push the changes to the documentation repo</li>
+<li><code class="docutils literal"><span class="pre">workon</span> <span class="pre">ouh-churchill-docs</span></code></li>
+<li><code class="docutils literal"><span class="pre">cd</span> <span class="pre">ouh-churchill.github.io-repo</span></code></li>
+<li><code class="docutils literal"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.</span></code></li>
+<li><code class="docutils literal"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">'updates'</span></code></li>
+<li><code class="docutils literal"><span class="pre">git</span> <span class="pre">push</span></code></li>
+<li>For the quick, it can be: <code class="docutils literal"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.;git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">'updates';git</span> <span class="pre">push</span></code></li>
+<li>Online documents can then be seen at <a class="reference external" href="#">https://ouh-churchill.github.io</a></li>
+</ul>
 </div>
 </div>
 
