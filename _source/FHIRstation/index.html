@@ -32,7 +32,7 @@
   
     <link rel="top" title="Diakonia 0.1.0 documentation" href="../../index.html"/>
         <link rel="next" title="Pancreas DB Project" href="../PancreasDB/index.html"/>
-        <link rel="prev" title="BMT Project" href="../BMT/index.html"/> 
+        <link rel="prev" title="NHIC Project" href="../NHIC/index.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -88,6 +88,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../development.html">Project Setup Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../development.html#dev-system-notes">Dev System Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../BMT/index.html">BMT Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NHIC/index.html">NHIC Project</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">FHIRstation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#notes">Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
@@ -170,11 +171,13 @@
 <div class="section" id="requirements">
 <span id="requirements"></span><h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
-<li>Provide a RESTful, FHIR-compliant, API to the data layer</li>
+<li>Provide a RESTful, FHIR-compliant, API to the data layer<ol>
 <li>API should be available via https</li>
 <li>API should support REST methodology</li>
 <li>API should support the following FHIR calls: Create (http <code class="docutils literal"><span class="pre">POST</span></code>), Read (http <code class="docutils literal"><span class="pre">GET</span></code>), Update (http <code class="docutils literal"><span class="pre">PUT</span></code>), Delete (http <code class="docutils literal"><span class="pre">DELETE</span></code>)</li>
 <li>API should additionally support FHIR calls: vread, history (instance), search (instance), history (type), conformance, history (system), search (system). See <a class="reference external" href="https://www.hl7.org/fhir/http.html">FHIR RESTful API</a> pages, in particular the <a class="reference external" href="https://www.hl7.org/fhir/http.html#summary">summary table</a>.</li>
+</ol>
+</li>
 <li>Create (a resource) should:<ol>
 <li>Accept http POST request</li>
 <li>Map the contents to an url which indicates the resource type (E.g. <code class="docutils literal"><span class="pre">http://server.org/fhir/patient</span></code>)</li>
@@ -183,13 +186,15 @@
 <li>Return only the newly assigned version id URL in the Location header</li>
 </ol>
 </li>
-<li>Update (a resource) should:</li>
+<li>Update (a resource) should:<ol>
 <li>Accept http PUT request</li>
 <li>Map the contents to an url which indicates the resource type (E.g. <code class="docutils literal"><span class="pre">http://server.org/fhir/patient/id/_history/version_id</span></code>)</li>
 <li>Accept the body’s format in Content-Type header (<strong>a:</strong> <code class="docutils literal"><span class="pre">application/json+fhir;charset=utf-8</span></code> and <strong>b:</strong> <code class="docutils literal"><span class="pre">application/xml+fhir;charset=utf-8</span></code>)</li>
 <li>Return http status 200 (OK), and the full version URI</li>
 <li>If resource does not exist, return http status 405 (Method Not Allowed). This is update, not update-or-create!</li>
 <li>If the resource URI does not match the latest version, return http status 409 (Conflict) and do not apply the update</li>
+</ol>
+</li>
 </ol>
 </div>
 <div class="section" id="design">
@@ -214,7 +219,7 @@ System layer diagram (modelled on the <a class="reference external" href="http:/
         <a href="../PancreasDB/index.html" class="btn btn-neutral float-right" title="Pancreas DB Project" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../BMT/index.html" class="btn btn-neutral" title="BMT Project" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../NHIC/index.html" class="btn btn-neutral" title="NHIC Project" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
