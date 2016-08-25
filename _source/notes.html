@@ -86,7 +86,9 @@
 <li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="user_stories.html">User Stories</a></li>
 <li class="toctree-l1"><a class="reference internal" href="development.html">Project Setup Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development.html#dev-system-notes">Dev System Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="BMT/index.html">BMT Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NHIC/index.html">NHIC Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FHIRstation/index.html">FHIRstation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PancreasDB/index.html">Pancreas DB Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TransplantEPR/index.html">Transplant EPR Project</a></li>
@@ -172,9 +174,11 @@
 <ul class="simple">
 <li><a class="reference external" href="#">https://angular.io/docs/ts/latest/guide/architecture.html</a></li>
 <li><a class="reference external" href="#">http://www.bluebuttonjs.com</a> &#8211; BlueButton.js helps developers parse and generate complex health data formats like C-CDA with ease, so you can empower patients with access to their health records.</li>
-<li><a class="reference external" href="#">https://github.com/openhealthcare/opal</a> &#8211; Django+Angular OSS health system</li>
+<li><a class="reference external" href="#">https://github.com/openhealthcare/opal</a> &#8211; Django+Angular OSS health system<ul>
 <li>With Plugins (though none for Transplant): <a class="reference external" href="#">http://opal.openhealthcare.org.uk/docs/guides/plugins_list/</a></li>
 <li>Documentation: <a class="reference external" href="#">http://opal.openhealthcare.org.uk/docs/</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="section" id="data-structures">
@@ -188,15 +192,23 @@
 <li><a class="reference external" href="#">http://systems.digital.nhs.uk/ddc</a> &#8211; Are behind the NHS Spine</li>
 <li><a class="reference external" href="#">https://code4health.org</a> &#8211; An incubator group from NHS England</li>
 <li>There are many references to strategy and ongoing work via the NHS Digital Technology pages - <a class="reference external" href="#">https://www.england.nhs.uk/digitaltechnology/</a></li>
-<li>Various data resources can be found on the TRUD (the Technology Reference data Update Distribution site) - <a class="reference external" href="#">https://isd.hscic.gov.uk/trud3/user/guest/group/0/home</a></li>
+<li>Various data resources can be found on the TRUD (the Technology Reference data Update Distribution site) - <a class="reference external" href="#">https://isd.hscic.gov.uk/trud3/user/guest/group/0/home</a><ul>
 <li>The Interoperability Toolkit - <a class="reference external" href="#">https://isd.hscic.gov.uk/trud3/user/guest/group/41/pack/30</a></li>
+</ul>
+</li>
 <li><a class="reference external" href="#">http://data.developer.nhs.uk/fhir/eRS/Chapter.1.About/index.html</a> &#8211; FHIR Implementation Guide for the NHS e-Referral Service</li>
-<li><a class="reference external" href="#">http://www.oxonhealthcaretransformation.nhs.uk/who-is-involved/transformation-board-meeting-papers/transformation-board-2016-04-26/73-for-info-oxfordshire-digital-platform/file</a> &#8211; Oxfordshire plans from March</li>
+<li><a class="reference external" href="#">http://www.oxonhealthcaretransformation.nhs.uk/who-is-involved/transformation-board-meeting-papers/transformation-board-2016-04-26/73-for-info-oxfordshire-digital-platform/file</a> &#8211; Oxfordshire plans from March<ul>
 <li><a class="reference external" href="#">http://www.oxonhealthcaretransformation.nhs.uk/who-is-involved/transformation-board-meeting-papers/</a> &#8211; For a full index of the Transformation Board&#8217;s meetings</li>
-<li><a class="reference external" href="#">http://www.ouh.nhs.uk/about/trust-board/2016/january/documents/TB2016.15-epr-plans-and-governance.pdf</a> &#8211; Trust strategy talks of a new Health Informatics Committee to be created. Need to investigate.</li>
+</ul>
+</li>
+<li><a class="reference external" href="#">http://www.ouh.nhs.uk/about/trust-board/2016/january/documents/TB2016.15-epr-plans-and-governance.pdf</a> &#8211; Trust strategy talks of a new Health Informatics Committee to be created. Need to investigate.<ul>
 <li>Full index at <a class="reference external" href="#">http://www.ouh.nhs.uk/about/trust-board/meetings-and-papers.aspx</a></li>
-<li>South, Central, and West, Commisioning Support Unit (Andrew Fenton, previously of this trust), writing about how they are supporting Digital Health changes &#8211; <a class="reference external" href="#">https://www.scwcsu.nhs.uk/news/insights-issue-6-june-2016-commissioning-show-special/how-digital-health-transformation-is-taking-shape</a></li>
+</ul>
+</li>
+<li>South, Central, and West, Commisioning Support Unit (Andrew Fenton, previously of this trust), writing about how they are supporting Digital Health changes &#8211; <a class="reference external" href="#">https://www.scwcsu.nhs.uk/news/insights-issue-6-june-2016-commissioning-show-special/how-digital-health-transformation-is-taking-shape</a><ul>
 <li><a class="reference external" href="https://www.scwcsu.nhs.uk/solutions/digital-transformation">Digital Transformation Services</a> &#64; SCW:CSU</li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="section" id="fhir-base">
@@ -216,30 +228,40 @@
 <li><a class="reference external" href="#">http://hl7.org/implement/standards/fhir/implementation.html</a> &#8211; Fhir implementation checklist</li>
 </ul>
 <ul class="simple">
-<li>Slideshows:</li>
+<li>Slideshows:<ul>
 <li><a class="reference external" href="#">http://www.slideshare.net/ewoutkramer/fhir-tutorial-morning</a></li>
 <li><a class="reference external" href="#">http://www.slideshare.net/GrahameGrieve/introduction-to-fhir</a></li>
 <li><a class="reference external" href="#">http://www.slideshare.net/DevDays2014/fhir-architecture-overview-for-nonprogrammers-ren-spronk</a></li>
 <li><a class="reference external" href="#">http://www.slideshare.net/ewoutkramer/fhir-profiling-tutorial</a></li>
 <li><a class="reference external" href="#">http://www.slideshare.net/ewoutkramer/hl7-fhir-for-developers</a></li>
-<li>Extensions are a key concept to understand, and some work will likely be needed to be done to create relevant ones for Transplantation</li>
+</ul>
+</li>
+<li>Extensions are a key concept to understand, and some work will likely be needed to be done to create relevant ones for Transplantation<ul>
 <li><a class="reference external" href="#">https://fhirblog.com/2014/03/06/extensions-are-not-second-class-fhir-citizens/</a></li>
 <li>See also the link to the NHS eRS which uses extensions</li>
+</ul>
+</li>
 <li><a class="reference external" href="#">http://www.hl7.org.uk/doc_store/NHS/HL7%20Integration%20Options%20for%20Trusts.pdf</a> &#8211; HL7 talks about integration strategies, including the need for roadmaps (and steps to create)</li>
 <li><a class="reference external" href="#">http://www.ehealthnews.eu/emis/4679-emis-health-implements-open-standards-for-interoperability</a> &#8211; EMIS are using Fhirbase with Snomed and NHS DD</li>
-<li><a class="reference external" href="#">https://www.renalreg.org/wp-content/uploads/2014/10/The-UK-Renal-Data-Collaboration-UKRDC-and-the-Data-Model-by-Dr-Keith-Simpson-and-Peter-Nicklin.pdf</a> - Project to create a UK Renal Registry that communicates with partners via FHIR</li>
+<li><a class="reference external" href="#">https://www.renalreg.org/wp-content/uploads/2014/10/The-UK-Renal-Data-Collaboration-UKRDC-and-the-Data-Model-by-Dr-Keith-Simpson-and-Peter-Nicklin.pdf</a> - Project to create a UK Renal Registry that communicates with partners via FHIR<ul>
 <li><a class="reference external" href="#">https://www.renalreg.org/wp-content/uploads/2014/09/UK_Renal_Data_Collaboration_White_Paper_1.1.pdf</a></li>
 <li><a class="reference external" href="#">https://www.renalreg.org/data/</a> - Has a UK Renal Registry Dataset definition</li>
+</ul>
+</li>
 <li><a class="reference external" href="#">http://stackoverflow.com/questions/tagged/hl7-fhir</a> &#8211; Stackoverflow has 260 Q&amp;As so far</li>
 <li><a class="reference external" href="#">https://twitter.com/FHIRnews</a></li>
 <li>From GNU Health, there&#8217;s a python reference library for Fhir: <a class="reference external" href="#">https://pypi.python.org/pypi/fhir</a></li>
 <li>Someone is having a go at merging Django with other techs to get a Fhir stack: <a class="reference external" href="#">https://github.com/videntity/django-fhir</a></li>
 <li>Lots of FHIR related postings at <a class="reference external" href="#">https://fhirblog.com</a></li>
-<li>As well as at: <a class="reference external" href="#">https://thefhirplace.com</a></li>
+<li>As well as at: <a class="reference external" href="#">https://thefhirplace.com</a><ul>
 <li><a class="reference external" href="#">https://thefhirplace.com/2016/08/08/create-my-first-fhir-implementation-guide-using-simplifier/</a></li>
-<li>Or from SMARTonFHIR: <a class="reference external" href="#">https://github.com/smart-on-fhir/client-py</a></li>
+</ul>
+</li>
+<li>Or from SMARTonFHIR: <a class="reference external" href="#">https://github.com/smart-on-fhir/client-py</a><ul>
 <li><a class="reference external" href="#">https://fhirblog.com/2016/07/08/what-is-smart-and-why-should-you-care/#more-158596</a></li>
 <li>SMART on FHIR Python Client Docs - <a class="reference external" href="#">http://docs.smarthealthit.org/client-py/index.html</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="section" id="openehr">
@@ -256,8 +278,10 @@
 <li><a class="reference external" href="#">https://www.networks.nhs.uk/nhs-networks/snomed-ct/snomed-ct-webinars/why-snomed-ct</a></li>
 <li><a class="reference external" href="#">http://systems.digital.nhs.uk/data/uktc/snomed</a></li>
 <li>Look for the UK SNOMED CT! - <a class="reference external" href="#">https://isd.hscic.gov.uk/trud3/user/guest/group/0/pack/26</a></li>
-<li>Python has a module for SNOMED - <a class="reference external" href="#">https://pypi.python.org/pypi/PyMedTermino</a></li>
+<li>Python has a module for SNOMED - <a class="reference external" href="#">https://pypi.python.org/pypi/PyMedTermino</a><ul>
 <li>Docs at <a class="reference external" href="#">http://pythonhosted.org/PyMedTermino/</a></li>
+</ul>
+</li>
 <li>Mapping is not without its issues: <a class="reference external" href="#">http://www.safescript.com/tmt_error_analysis.html</a></li>
 </ul>
 </div>
@@ -269,10 +293,12 @@
 <li>Searching for &#8220;g cloud nhs accredited n3 hosting&#8221;:</li>
 <li><a class="reference external" href="#">http://www.redcentricplc.com/services/infrastructure/hosting-colocation/n3-hosting/</a></li>
 <li><a class="reference external" href="#">https://www.4d-dc.com/cloud</a></li>
-<li><a class="reference external" href="#">http://ukcloud.com</a> &#8211; The new name for Skyscape</li>
+<li><a class="reference external" href="#">http://ukcloud.com</a> &#8211; The new name for Skyscape<ul>
 <li>Supposedly behind Genomics England hosting: <a class="reference external" href="#">http://ukcloud.com/wp-content/uploads/2016/07/UKCloud_CaseStudy_RGB_Digital_Genomics.pdf</a></li>
 <li><a class="reference external" href="#">https://www.digitalmarketplace.service.gov.uk/g-cloud/services/7456481668431278</a></li>
 <li><a class="reference external" href="#">http://ukcloud.com/what-we-do/platform-as-a-service/digital-application-platform</a></li>
+</ul>
+</li>
 </ul>
 <p><strong>Security</strong> is an important topic, and covers all aspects of all projects...</p>
 <ul class="simple">

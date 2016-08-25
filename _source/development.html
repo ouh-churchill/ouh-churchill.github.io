@@ -95,6 +95,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="BMT/index.html">BMT Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NHIC/index.html">NHIC Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FHIRstation/index.html">FHIRstation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PancreasDB/index.html">Pancreas DB Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TransplantEPR/index.html">Transplant EPR Project</a></li>
@@ -197,13 +198,15 @@
 <li><code class="docutils literal"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">v8-315</span></code> &#8211; only works since June 2016</li>
 <li><code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pgxnclient</span></code></li>
 <li><code class="docutils literal"><span class="pre">LIBRARY_PATH=&quot;/usr/local/opt/v8-315/lib&quot;</span> <span class="pre">CPATH=&quot;/usr/local/opt/v8-315/include&quot;</span> <span class="pre">pgxnclient</span> <span class="pre">install</span> <span class="pre">plv8=1.4.3</span></code></li>
-<li>Then we follow <a class="reference external" href="#">https://github.com/fhirbase/fhirbase-plv8#installation</a></li>
+<li>Then we follow <a class="reference external" href="#">https://github.com/fhirbase/fhirbase-plv8#installation</a><ul>
 <li><code class="docutils literal"><span class="pre">psql</span> <span class="pre">-d</span> <span class="pre">postgres</span></code> &#8211; because there isn&#8217;t a DB named after the local user. We now are in the PSQL CLI:</li>
 <li><code class="docutils literal"><span class="pre">CREATE</span> <span class="pre">DATABASE</span> <span class="pre">fhirbase;</span></code>. Then exit CLI</li>
 <li><code class="docutils literal"><span class="pre">export</span> <span class="pre">DATABASE_URL=postgres://user:password&#64;localhost:5432/fhirbase</span></code> &#8211; remember to escape any symbols in password</li>
 <li><code class="docutils literal"><span class="pre">wget</span> <span class="pre">https://github.com/fhirbase/fhirbase-plv8/releases/download/v1.4.0.0/fhirbase-1.4.0.0.sql.zip</span></code></li>
 <li><code class="docutils literal"><span class="pre">unzip</span> <span class="pre">fhirbase-1.4.0.0.sql.zip</span></code></li>
 <li><code class="docutils literal"><span class="pre">cat</span> <span class="pre">fhirbase-1.4.0.0.sql</span> <span class="pre">|</span> <span class="pre">psql</span> <span class="pre">fhirbase</span></code></li>
+</ul>
+</li>
 <li>And it worked fine. Tested by creating patient storage, seeing new tables generated, and then removed the storage.</li>
 </ul>
 </div>
@@ -213,16 +216,20 @@
 <p>To publish:</p>
 <ul class="simple">
 <li>In the diakonia repo, edit your documents, and commit changes</li>
-<li>From the cli, whilst <strong>in the diakonia virtualenv</strong>:</li>
+<li>From the cli, whilst <strong>in the diakonia virtualenv</strong>:<ul>
 <li><code class="docutils literal"><span class="pre">cd</span> <span class="pre">docs</span></code></li>
 <li><code class="docutils literal"><span class="pre">make</span> <span class="pre">html</span></code></li>
-<li>In another cli, we add, commit, and push the changes to the documentation repo</li>
+</ul>
+</li>
+<li>In another cli, we add, commit, and push the changes to the documentation repo<ul>
 <li><code class="docutils literal"><span class="pre">workon</span> <span class="pre">ouh-churchill-docs</span></code></li>
 <li><code class="docutils literal"><span class="pre">cd</span> <span class="pre">ouh-churchill.github.io-repo</span></code></li>
 <li><code class="docutils literal"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.</span></code></li>
 <li><code class="docutils literal"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">'updates'</span></code></li>
 <li><code class="docutils literal"><span class="pre">git</span> <span class="pre">push</span></code></li>
 <li>For the quick, it can be: <code class="docutils literal"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.;git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">'updates';git</span> <span class="pre">push</span></code></li>
+</ul>
+</li>
 <li>Online documents can then be seen at <a class="reference external" href="#">https://ouh-churchill.github.io</a></li>
 </ul>
 </div>

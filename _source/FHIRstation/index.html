@@ -159,12 +159,16 @@
 <p>Background research for alternative solutions:</p>
 <ul class="simple">
 <li><a class="reference external" href="http://wiki.hl7.org/index.php?title=Open_Source_FHIR_implementations">List of open source FHIR implementations</a> contains 4 examples: One in <a class="reference external" href="https://github.com/grahamegrieve/fhirserver">Delphi/MSSQL</a>; One in Grails (Java/Groovy/Postgres); One in <a class="reference external" href="https://github.com/furore-fhir/spark">.net/MongoDB</a>; One in Java/java-db. None of these fit the technology stack requirements</li>
-<li><a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health">GNU Health</a> offers a FHIR server in <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Installation">python/tryton/postgres</a> stack, so may offer some help, but isn&#8217;t close enough to the mark to start from</li>
+<li><a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health">GNU Health</a> offers a FHIR server in <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Installation">python/tryton/postgres</a> stack, so may offer some help, but isn&#8217;t close enough to the mark to start from<ul>
 <li>The Tryton based server code is at <a class="reference external" href="#">http://hg.savannah.gnu.org/hgweb/health/file/9e52df027d5d/tryton/backend/fhir/server</a>. Not clear at first glance as to its operation and how/why the fhir classes are hardcoded</li>
 <li>The basic <a class="reference external" href="https://pypi.python.org/pypi/fhir">python client</a> from them is also not maintained... (last uploaded 17/4/2014)</li>
-<li>SMART on FHIR offers a maintained <a class="reference external" href="https://github.com/smart-on-fhir/client-py">python FHIR client</a> with <a class="reference external" href="https://smart-on-fhir.github.io/client-py">good documentation</a>. This may be able to be incorportated to provide the FHIR objects as python classes, however this is written as a flask app, so can&#8217;t be fully run without expanding the tech base with another python framework</li>
+</ul>
+</li>
+<li>SMART on FHIR offers a maintained <a class="reference external" href="https://github.com/smart-on-fhir/client-py">python FHIR client</a> with <a class="reference external" href="https://smart-on-fhir.github.io/client-py">good documentation</a>. This may be able to be incorportated to provide the FHIR objects as python classes, however this is written as a flask app, so can&#8217;t be fully run without expanding the tech base with another python framework<ul>
 <li>Perhaps of more use is the SMART on FHIR, <a class="reference external" href="https://github.com/smart-on-fhir/fhir-parser">fhir-parser</a> which goes through the specification and generates python classes</li>
 <li>They also have a <a class="reference external" href="https://github.com/smart-on-fhir/sample-patients">package of sample patients</a> for testing with</li>
+</ul>
+</li>
 <li><a class="reference external" href="https://github.com/videntity/django-fhir">Django-FHIR</a> (nice optimistic title) is an alpha level project that hasn&#8217;t seen development in 5+ months which aims to do python/django/mongodb implementation of a FHIR server. Alpha level is a bit of a stretch from browsing through the current master branch, looks like there isn&#8217;t much to work from here</li>
 </ul>
 </div>
