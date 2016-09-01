@@ -153,6 +153,1503 @@
             
   <div class="section" id="module-diakonia.eyeaux.models">
 <span id="diakonia-eyeaux-models"></span><h1>diakonia.eyeaux.models<a class="headerlink" href="#module-diakonia.eyeaux.models" title="Permalink to this headline">¶</a></h1>
+<p class="rubric">Classes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#diakonia.eyeaux.models.NHSBTFile" title="diakonia.eyeaux.models.NHSBTFile"><code class="xref py py-obj docutils literal"><span class="pre">NHSBTFile</span></code></a>(id,&nbsp;filename,&nbsp;extract_date,&nbsp;...)</td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param id:</th><td class="field-body">&#8220;ID&#8221;</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#diakonia.eyeaux.models.NHSBTLog" title="diakonia.eyeaux.models.NHSBTLog"><code class="xref py py-obj docutils literal"><span class="pre">NHSBTLog</span></code></a>(id,&nbsp;file,&nbsp;record,&nbsp;changed_fields)</td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param id:</th><td class="field-body">&#8220;ID&#8221;</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#diakonia.eyeaux.models.NHSBTRecord" title="diakonia.eyeaux.models.NHSBTRecord"><code class="xref py py-obj docutils literal"><span class="pre">NHSBTRecord</span></code></a>(id,&nbsp;recip_forename,&nbsp;...)</td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param id:</th><td class="field-body">&#8220;ID&#8221;</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="diakonia.eyeaux.models.NHSBTFile">
+<em class="property">class </em><code class="descclassname">diakonia.eyeaux.models.</code><code class="descname">NHSBTFile</code><span class="sig-paren">(</span><em>id</em>, <em>filename</em>, <em>extract_date</em>, <em>ingest_date</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/diakonia/eyeaux/models.html#NHSBTFile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTFile" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.AutoField" title="(in Django v1.10)"><em>django.db.models.AutoField</em></a>) &#8211; &#8220;ID&#8221;</li>
+<li><strong>filename</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;filename&#8221;</li>
+<li><strong>extract_date</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.DateField" title="(in Django v1.10)"><em>django.db.models.DateField</em></a>) &#8211; &#8220;extract date&#8221;</li>
+<li><strong>ingest_date</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.DateField" title="(in Django v1.10)"><em>django.db.models.DateField</em></a>) &#8211; &#8220;ingest date&#8221;</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTFile.filename">
+<code class="descname">filename</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTFile.filename" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTFile.extract_date">
+<code class="descname">extract_date</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTFile.extract_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTFile.ingest_date">
+<code class="descname">ingest_date</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTFile.ingest_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="diakonia.eyeaux.models.NHSBTFile.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTFile.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="diakonia.eyeaux.models.NHSBTFile.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descclassname">NHSBTFile.</code><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTFile.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="diakonia.eyeaux.models.NHSBTFile.get_next_by_extract_date">
+<code class="descclassname">NHSBTFile.</code><code class="descname">get_next_by_extract_date</code><span class="sig-paren">(</span><em>*moreargs</em>, <em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTFile.get_next_by_extract_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="diakonia.eyeaux.models.NHSBTFile.get_next_by_ingest_date">
+<code class="descclassname">NHSBTFile.</code><code class="descname">get_next_by_ingest_date</code><span class="sig-paren">(</span><em>*moreargs</em>, <em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTFile.get_next_by_ingest_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="diakonia.eyeaux.models.NHSBTFile.get_previous_by_extract_date">
+<code class="descclassname">NHSBTFile.</code><code class="descname">get_previous_by_extract_date</code><span class="sig-paren">(</span><em>*moreargs</em>, <em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTFile.get_previous_by_extract_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="diakonia.eyeaux.models.NHSBTFile.get_previous_by_ingest_date">
+<code class="descclassname">NHSBTFile.</code><code class="descname">get_previous_by_ingest_date</code><span class="sig-paren">(</span><em>*moreargs</em>, <em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTFile.get_previous_by_ingest_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTFile.id">
+<code class="descclassname">NHSBTFile.</code><code class="descname">id</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTFile.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTFile.nhsbtlog_set">
+<code class="descclassname">NHSBTFile.</code><code class="descname">nhsbtlog_set</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTFile.nhsbtlog_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">parent.children</span></code> is a <code class="docutils literal"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="diakonia.eyeaux.models.NHSBTRecord">
+<em class="property">class </em><code class="descclassname">diakonia.eyeaux.models.</code><code class="descname">NHSBTRecord</code><span class="sig-paren">(</span><em>id</em>, <em>recip_forename</em>, <em>recip_surname</em>, <em>rdob</em>, <em>rnhs_no</em>, <em>rpostcode</em>, <em>recip_residence</em>, <em>rsex</em>, <em>rethnic</em>, <em>rbg</em>, <em>rrhesus</em>, <em>recip_id</em>, <em>rdod</em>, <em>donor_forename</em>, <em>donor_surname</em>, <em>ddob</em>, <em>dnhs_no</em>, <em>donor_postcode</em>, <em>dresidence</em>, <em>dsex</em>, <em>dethnic</em>, <em>dbg</em>, <em>drhesus</em>, <em>donor_id</em>, <em>dage</em>, <em>dcod</em>, <em>dhtlv</em>, <em>dsyphilis</em>, <em>dpast_alcohol_abuse</em>, <em>dpast_cardio_disease</em>, <em>dpast_diabetes</em>, <em>dpast_drug_abuse</em>, <em>dpast_hypertension</em>, <em>dpast_liver_disease</em>, <em>dpast_other</em>, <em>dpast_other_details</em>, <em>dpast_smoker</em>, <em>dpast_smoker_amount</em>, <em>dpast_tumour</em>, <em>dpast_uti</em>, <em>dpast_family_diabetes</em>, <em>dpast_family_diabetes_type</em>, <em>dial_at_tx</em>, <em>dial_at_tx_type</em>, <em>dial_start_date</em>, <em>dial_end_date</em>, <em>no_prev_tx</em>, <em>tx_date</em>, <em>rec_unit</em>, <em>rhosp_no</em>, <em>dtype</em>, <em>rltnship</em>, <em>relationship_details</em>, <em>laterality</em>, <em>tx_type</em>, <em>local</em>, <em>faildate</em>, <em>aitx_type</em>, <em>cit_hrs</em>, <em>fwit</em>, <em>swit</em>, <em>amm</em>, <em>bmm</em>, <em>drmm</em>, <em>recip_hla_sample_date</em>, <em>recip_first_a_broad</em>, <em>recip_first_a_split</em>, <em>recip_second_a_broad</em>, <em>recip_second_a_split</em>, <em>recip_first_b_broad</em>, <em>recip_first_b_split</em>, <em>recip_second_b_broad</em>, <em>recip_second_b_split</em>, <em>recip_first_c_broad</em>, <em>recip_first_c_split</em>, <em>recip_second_c_broad</em>, <em>recip_second_c_split</em>, <em>recip_first_dr_broad</em>, <em>recip_first_dr_split</em>, <em>recip_second_dr_broad</em>, <em>recip_second_dr_split</em>, <em>recip_first_dp_broad</em>, <em>recip_first_dp_split</em>, <em>recip_second_dp_broad</em>, <em>recip_second_dp_split</em>, <em>recip_first_dq_broad</em>, <em>recip_first_dq_split</em>, <em>recip_second_dq_broad</em>, <em>recip_second_dq_split</em>, <em>donor_hla_sample_date</em>, <em>donor_first_a_broad</em>, <em>donor_first_a_split</em>, <em>donor_second_a_broad</em>, <em>donor_second_a_split</em>, <em>donor_first_b_broad</em>, <em>donor_first_b_split</em>, <em>donor_second_b_broad</em>, <em>donor_second_b_split</em>, <em>donor_first_c_broad</em>, <em>donor_first_c_split</em>, <em>donor_second_c_broad</em>, <em>donor_second_c_split</em>, <em>donor_first_dr_broad</em>, <em>donor_first_dr_split</em>, <em>donor_second_dr_broad</em>, <em>donor_second_dr_split</em>, <em>donor_first_dp_broad</em>, <em>donor_first_dp_split</em>, <em>donor_second_dp_broad</em>, <em>donor_second_dp_split</em>, <em>donor_first_dq_broad</em>, <em>donor_first_dq_split</em>, <em>donor_second_dq_broad</em>, <em>donor_second_dq_split</em>, <em>cyclosporin</em>, <em>mycophenolate_mofetil</em>, <em>other_immuno_drug</em>, <em>immuno_text</em>, <em>prednisolone_prednisone</em>, <em>tacrolimus</em>, <em>azathioprine</em>, <em>alg_atg</em>, <em>okt3</em>, <em>rcmv</em>, <em>rhiv</em>, <em>debv</em>, <em>dtoxo</em>, <em>dhiv</em>, <em>dgf</em>, <em>resume_dialysis_date</em>, <em>rheight</em>, <em>rweight</em>, <em>serum3</em>, <em>scdate3</em>, <em>serum12</em>, <em>scdate12</em>, <em>serum24</em>, <em>scdate24</em>, <em>serum36</em>, <em>scdate36</em>, <em>serum48</em>, <em>scdate48</em>, <em>serum60</em>, <em>scdate60</em>, <em>rbhv</em>, <em>rhcv</em>, <em>dhbcab</em>, <em>dhbsag</em>, <em>dhcv</em>, <em>egfr3</em>, <em>egfr12</em>, <em>egfr24</em>, <em>egfr36</em>, <em>egfr48</em>, <em>egfr60</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/diakonia/eyeaux/models.html#NHSBTRecord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.AutoField" title="(in Django v1.10)"><em>django.db.models.AutoField</em></a>) &#8211; &#8220;ID&#8221;</li>
+<li><strong>recip_forename</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;RECIP_FORENAME&#8221; - Recipient Forename</li>
+<li><strong>recip_surname</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;RECIP_SURNAME&#8221; - Recipient Surname</li>
+<li><strong>rdob</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.DateField" title="(in Django v1.10)"><em>django.db.models.DateField</em></a>) &#8211; &#8220;RDOB&#8221; - Recipient date of birth</li>
+<li><strong>rnhs_no</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;RNHS_NO&#8221; - Recipient NHS Number</li>
+<li><strong>rpostcode</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;RPOSTCODE&#8221; - Recipient Postcode</li>
+<li><strong>recip_residence</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;recip_residence&#8221; - Recipient country of residence</li>
+<li><strong>rsex</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;RSEX&#8221; - Recipient gender</li>
+<li><strong>rethnic</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;RETHNIC&#8221; - Recipient ethnicity</li>
+<li><strong>rbg</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;RBG&#8221; - Recipient blood group</li>
+<li><strong>rrhesus</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;RRHESUS&#8221; - Recipient rhesus blood group</li>
+<li><strong>recip_id</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;RECIP_ID&#8221; - NHSBT recipient identification number</li>
+<li><strong>rdod</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.DateField" title="(in Django v1.10)"><em>django.db.models.DateField</em></a>) &#8211; &#8220;RDOD&#8221; - recipient date of death</li>
+<li><strong>donor_forename</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DONOR_FORENAME&#8221; - donor forename</li>
+<li><strong>donor_surname</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DONOR_SURNAME&#8221; - donor surname</li>
+<li><strong>ddob</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.DateField" title="(in Django v1.10)"><em>django.db.models.DateField</em></a>) &#8211; &#8220;DDOB&#8221; - donor date of birth</li>
+<li><strong>dnhs_no</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DNHS_NO&#8221; - donor NHS Number</li>
+<li><strong>donor_postcode</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DONOR_POSTCODE&#8221; - Donor postcode</li>
+<li><strong>dresidence</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DRESIDENCE&#8221; - Donor country of residence</li>
+<li><strong>dsex</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DSEX&#8221; - Donor gender</li>
+<li><strong>dethnic</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DETHNIC&#8221; - Donor ethnicity</li>
+<li><strong>dbg</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DBG&#8221; - Donor blood group</li>
+<li><strong>drhesus</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DRHESUS&#8221; - Donor rhesus blood group</li>
+<li><strong>donor_id</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DONOR_ID&#8221; - NHSBT donor identification number</li>
+<li><strong>dage</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DAGE&#8221; - Donor age</li>
+<li><strong>dcod</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DCOD&#8221; - Donor cause of death</li>
+<li><strong>dhtlv</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DHTLV&#8221; - Does the donor have HTLV</li>
+<li><strong>dsyphilis</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DSYPHILIS&#8221; - Does the donor have syphilis</li>
+<li><strong>dpast_alcohol_abuse</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DPAST_ALCOHOL_ABUSE&#8221; - past history of alcohol abuse in the donor</li>
+<li><strong>dpast_cardio_disease</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DPAST_CARDIO_DISEASE&#8221; - past history of cardio disease in the donor</li>
+<li><strong>dpast_diabetes</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DPAST_DIABETES&#8221; - past history of diabetes in the donor</li>
+<li><strong>dpast_drug_abuse</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DPAST_DRUG_ABUSE&#8221; - past history of drug abuse in the donor</li>
+<li><strong>dpast_hypertension</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DPAST_HYPERTENSION&#8221; - past history of hypertension in the donor</li>
+<li><strong>dpast_liver_disease</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DPAST_LIVER_DISEASE&#8221; - past history of liver disease in the donor</li>
+<li><strong>dpast_other</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DPAST_OTHER&#8221; - any other past history in the donor</li>
+<li><strong>dpast_other_details</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.TextField" title="(in Django v1.10)"><em>django.db.models.TextField</em></a>) &#8211; &#8220;DPAST_OTHER_DETAILS&#8221; - details of other past histories</li>
+<li><strong>dpast_smoker</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DPAST_SMOKER&#8221; - past history of smoking in the donor</li>
+<li><strong>dpast_smoker_amount</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;dpast_smoker_amount&#8221; - past smoking amount</li>
+<li><strong>dpast_tumour</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DPAST_TUMOUR&#8221; - past history of tumour in the donor</li>
+<li><strong>dpast_uti</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DPAST_UTI&#8221; - past history of UTI in the donor</li>
+<li><strong>dpast_family_diabetes</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DPAST_FAMILY_DIABETES&#8221; - past history of diabetes in the donor family</li>
+<li><strong>dpast_family_diabetes_type</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DPAST_FAMILY_DIABETES_TYPE&#8221; - what type of family diabetes</li>
+<li><strong>dial_at_tx</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DIAL_AT_TX&#8221; - was the recipient on dialysis at transplant</li>
+<li><strong>dial_at_tx_type</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DIAL_AT_TX_TYPE&#8221; - what type of dialysis was the recipient on</li>
+<li><strong>dial_start_date</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.DateTimeField" title="(in Django v1.10)"><em>django.db.models.DateTimeField</em></a>) &#8211; &#8220;DIAL_START_DATE&#8221; - what date did the recipient start dialysis</li>
+<li><strong>dial_end_date</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.DateTimeField" title="(in Django v1.10)"><em>django.db.models.DateTimeField</em></a>) &#8211; &#8220;DIAL_END_DATE&#8221; - what date did the recipient stop dialysis</li>
+<li><strong>no_prev_tx</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;NO_PREV_TX&#8221; - had the recipient had any previous transplants</li>
+<li><strong>tx_date</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.DateField" title="(in Django v1.10)"><em>django.db.models.DateField</em></a>) &#8211; &#8220;TX_DATE&#8221; - date of recipients transplant</li>
+<li><strong>rec_unit</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;REC_UNIT&#8221; - Transplant unit</li>
+<li><strong>rhosp_no</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;RHOSP_NO&#8221; - recipients hospital number</li>
+<li><strong>dtype</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DTYPE&#8221; - donor type</li>
+<li><strong>rltnship</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;RLTNSHIP&#8221; - relationship status of living donor transplants</li>
+<li><strong>relationship_details</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;RELATIONSHIP_DETAILS&#8221; - details of the relationship between recipient and donor</li>
+<li><strong>laterality</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;LATERALITY&#8221; - No description</li>
+<li><strong>tx_type</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;TX_TYPE&#8221; - Type of transplant performed</li>
+<li><strong>local</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;LOCAL&#8221; - was the transplant performed in the same centre as the donor</li>
+<li><strong>faildate</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.DateField" title="(in Django v1.10)"><em>django.db.models.DateField</em></a>) &#8211; &#8220;FAILDATE&#8221; - what date did the transplant fail</li>
+<li><strong>aitx_type</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;AITX_TYPE&#8221; - what type of antibody incompatible transplant was performed</li>
+<li><strong>cit_hrs</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;CIT_HRS&#8221; - cold ischaemia time in hours</li>
+<li><strong>fwit</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;fWIT&#8221; - functional warm ischaemia time in minutes</li>
+<li><strong>swit</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;sWIT&#8221; - standard warm ischaemia time in minutes</li>
+<li><strong>amm</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;AMM&#8221; - how many mismatches at the A locus</li>
+<li><strong>bmm</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;BMM&#8221; - how many mismatches at the B locus</li>
+<li><strong>drmm</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DRMM&#8221; - how many mismatches at the DR locus</li>
+<li><strong>recip_hla_sample_date</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.DateTimeField" title="(in Django v1.10)"><em>django.db.models.DateTimeField</em></a>) &#8211; &#8220;RECIP_HLA_SAMPLE_DATE&#8221; - when was the last recipient HLA sample taken</li>
+<li><strong>recip_first_a_broad</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Recip_First_A_Broad&#8221; - Recipient HLA type</li>
+<li><strong>recip_first_a_split</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Recip_First_A_Split&#8221; - Recipient HLA type</li>
+<li><strong>recip_second_a_broad</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Recip_Second_A_Broad&#8221; - Recipient HLA type</li>
+<li><strong>recip_second_a_split</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Recip_Second_A_Split&#8221; - Recipient HLA type</li>
+<li><strong>recip_first_b_broad</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Recip_First_B_Broad&#8221; - Recipient HLA type</li>
+<li><strong>recip_first_b_split</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Recip_First_B_Split&#8221; - Recipient HLA type</li>
+<li><strong>recip_second_b_broad</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Recip_Second_B_Broad&#8221; - Recipient HLA type</li>
+<li><strong>recip_second_b_split</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Recip_Second_B_Split&#8221; - Recipient HLA type</li>
+<li><strong>recip_first_c_broad</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Recip_First_C_Broad&#8221; - Recipient HLA type</li>
+<li><strong>recip_first_c_split</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Recip_First_C_Split&#8221; - Recipient HLA type</li>
+<li><strong>recip_second_c_broad</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Recip_Second_C_Broad&#8221; - Recipient HLA type</li>
+<li><strong>recip_second_c_split</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Recip_Second_C_Split&#8221; - Recipient HLA type</li>
+<li><strong>recip_first_dr_broad</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Recip_First_DR_Broad&#8221; - Recipient HLA type</li>
+<li><strong>recip_first_dr_split</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Recip_First_DR_Split&#8221; - Recipient HLA type</li>
+<li><strong>recip_second_dr_broad</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Recip_Second_DR_Broad&#8221; - Recipient HLA type</li>
+<li><strong>recip_second_dr_split</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Recip_Second_DR_Split&#8221; - Recipient HLA type</li>
+<li><strong>recip_first_dp_broad</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Recip_First_DP_Broad&#8221; - Recipient HLA type</li>
+<li><strong>recip_first_dp_split</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Recip_First_DP_Split&#8221; - Recipient HLA type</li>
+<li><strong>recip_second_dp_broad</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Recip_Second_DP_Broad&#8221; - Recipient HLA type</li>
+<li><strong>recip_second_dp_split</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Recip_Second_DP_Split&#8221; - Recipient HLA type</li>
+<li><strong>recip_first_dq_broad</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Recip_First_DQ_Broad&#8221; - Recipient HLA type</li>
+<li><strong>recip_first_dq_split</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Recip_First_DQ_Split&#8221; - Recipient HLA type</li>
+<li><strong>recip_second_dq_broad</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Recip_Second_DQ_Broad&#8221; - Recipient HLA type</li>
+<li><strong>recip_second_dq_split</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Recip_Second_DQ_Split&#8221; - Recipient HLA type</li>
+<li><strong>donor_hla_sample_date</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.DateTimeField" title="(in Django v1.10)"><em>django.db.models.DateTimeField</em></a>) &#8211; &#8220;DONOR_HLA_SAMPLE_DATE&#8221; - When was the last donor HLA sample taken</li>
+<li><strong>donor_first_a_broad</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Donor_First_A_Broad&#8221; - Donor HLA type</li>
+<li><strong>donor_first_a_split</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Donor_First_A_Split&#8221; - Donor HLA type</li>
+<li><strong>donor_second_a_broad</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Donor_Second_A_Broad&#8221; - Donor HLA type</li>
+<li><strong>donor_second_a_split</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Donor_Second_A_Split&#8221; - Donor HLA type</li>
+<li><strong>donor_first_b_broad</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Donor_First_B_Broad&#8221; - Donor HLA type</li>
+<li><strong>donor_first_b_split</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Donor_First_B_Split&#8221; - Donor HLA type</li>
+<li><strong>donor_second_b_broad</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Donor_Second_B_Broad&#8221; - Donor HLA type</li>
+<li><strong>donor_second_b_split</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Donor_Second_B_Split&#8221; - Donor HLA type</li>
+<li><strong>donor_first_c_broad</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Donor_First_C_Broad&#8221; - Donor HLA type</li>
+<li><strong>donor_first_c_split</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Donor_First_C_Split&#8221; - Donor HLA type</li>
+<li><strong>donor_second_c_broad</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Donor_Second_C_Broad&#8221; - Donor HLA type</li>
+<li><strong>donor_second_c_split</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Donor_Second_C_Split&#8221; - Donor HLA type</li>
+<li><strong>donor_first_dr_broad</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Donor_First_DR_Broad&#8221; - Donor HLA type</li>
+<li><strong>donor_first_dr_split</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Donor_First_DR_Split&#8221; - Donor HLA type</li>
+<li><strong>donor_second_dr_broad</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Donor_Second_DR_Broad&#8221; - Donor HLA type</li>
+<li><strong>donor_second_dr_split</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Donor_Second_DR_Split&#8221; - Donor HLA type</li>
+<li><strong>donor_first_dp_broad</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Donor_First_DP_Broad&#8221; - Donor HLA type</li>
+<li><strong>donor_first_dp_split</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Donor_First_DP_Split&#8221; - Donor HLA type</li>
+<li><strong>donor_second_dp_broad</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Donor_Second_DP_Broad&#8221; - Donor HLA type</li>
+<li><strong>donor_second_dp_split</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Donor_Second_DP_Split&#8221; - Donor HLA type</li>
+<li><strong>donor_first_dq_broad</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Donor_First_DQ_Broad&#8221; - Donor HLA type</li>
+<li><strong>donor_first_dq_split</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Donor_First_DQ_Split&#8221; - Donor HLA type</li>
+<li><strong>donor_second_dq_broad</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Donor_Second_DQ_Broad&#8221; - Donor HLA type</li>
+<li><strong>donor_second_dq_split</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;Donor_Second_DQ_Split&#8221; - Donor HLA type</li>
+<li><strong>cyclosporin</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;CYCLOSPORIN&#8221; - Immunosuppresion and induction therapy</li>
+<li><strong>mycophenolate_mofetil</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;MYCOPHENOLATE_MOFETIL&#8221; - Immunosuppresion and induction therapy</li>
+<li><strong>other_immuno_drug</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;OTHER_IMMUNO_DRUG&#8221; - Immunosuppresion and induction therapy</li>
+<li><strong>immuno_text</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;IMMUNO_TEXT&#8221; - Immunosuppresion and induction therapy</li>
+<li><strong>prednisolone_prednisone</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;PREDNISOLONE_PREDNISONE&#8221; - Immunosuppresion and induction therapy</li>
+<li><strong>tacrolimus</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;TACROLIMUS&#8221; - Immunosuppresion and induction therapy</li>
+<li><strong>azathioprine</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;AZATHIOPRINE&#8221; - Immunosuppresion and induction therapy</li>
+<li><strong>alg_atg</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;ALG_ATG&#8221; - Immunosuppresion and induction therapy</li>
+<li><strong>okt3</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;OKT3&#8221; - Immunosuppresion and induction therapy</li>
+<li><strong>rcmv</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;RCMV&#8221; - Recipient CMV status</li>
+<li><strong>rhiv</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;RHIV&#8221; - Recipient HIV status</li>
+<li><strong>debv</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DEBV&#8221; - Donor EBV status</li>
+<li><strong>dtoxo</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DTOXO&#8221; - Donor TOXO status</li>
+<li><strong>dhiv</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DHIV&#8221; - Donor HIV status</li>
+<li><strong>dgf</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DGF&#8221; - Did the recipient have delayed graft function</li>
+<li><strong>resume_dialysis_date</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.DateTimeField" title="(in Django v1.10)"><em>django.db.models.DateTimeField</em></a>) &#8211; &#8220;RESUME_DIALYSIS_DATE&#8221; - when did the recipient resume dialysis post transplant</li>
+<li><strong>rheight</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;RHEIGHT&#8221; - recipient height</li>
+<li><strong>rweight</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;RWEIGHT&#8221; - recipient weight</li>
+<li><strong>serum3</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;serum3&#8221; - serum creatinine at 3 months</li>
+<li><strong>scdate3</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.DateField" title="(in Django v1.10)"><em>django.db.models.DateField</em></a>) &#8211; &#8220;scdate3&#8221; - date of serum creatinine at 3 months</li>
+<li><strong>serum12</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;serum12&#8221; - serum creatinine at 12 months</li>
+<li><strong>scdate12</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.DateField" title="(in Django v1.10)"><em>django.db.models.DateField</em></a>) &#8211; &#8220;scdate12&#8221; - date of serum creatinine at 12 months</li>
+<li><strong>serum24</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;serum24&#8221; - serum creatinine at 24 months</li>
+<li><strong>scdate24</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.DateField" title="(in Django v1.10)"><em>django.db.models.DateField</em></a>) &#8211; &#8220;scdate24&#8221; - date of serum creatinine at 24 months</li>
+<li><strong>serum36</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;serum36&#8221; - serum creatinine at 36 months</li>
+<li><strong>scdate36</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.DateField" title="(in Django v1.10)"><em>django.db.models.DateField</em></a>) &#8211; &#8220;scdate36&#8221; - date of serum creatinine at 36 months</li>
+<li><strong>serum48</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;serum48&#8221; - serum creatinine at 48 months</li>
+<li><strong>scdate48</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.DateField" title="(in Django v1.10)"><em>django.db.models.DateField</em></a>) &#8211; &#8220;scdate48&#8221; - date of serum creatinine at 48 months</li>
+<li><strong>serum60</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;serum60&#8221; - serum creatinine at 60 months</li>
+<li><strong>scdate60</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.DateField" title="(in Django v1.10)"><em>django.db.models.DateField</em></a>) &#8211; &#8220;scdate60&#8221; - date of serum creatinine at 60 months</li>
+<li><strong>rbhv</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;RBHV&#8221; - recipient BHV status</li>
+<li><strong>rhcv</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;RHCV&#8221; - Recipient HCV status</li>
+<li><strong>dhbcab</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DHBCAB&#8221; - donor Hep B core antigen status</li>
+<li><strong>dhbsag</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DHBSAG&#8221; - donor hep B surface antigen status</li>
+<li><strong>dhcv</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;DHCV&#8221; - Donor HCV status</li>
+<li><strong>egfr3</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;eGFR3&#8221; - recipient eGFR at 3 months</li>
+<li><strong>egfr12</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;eGFR12&#8221; - recipient eGFR at 12 months</li>
+<li><strong>egfr24</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;eGFR24&#8221; - recipient eGFR at 24 months</li>
+<li><strong>egfr36</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;eGFR36&#8221; - recipient eGFR at 36 months</li>
+<li><strong>egfr48</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;eGFR48&#8221; - recipient eGFR at 48 months</li>
+<li><strong>egfr60</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField" title="(in Django v1.10)"><em>django.db.models.CharField</em></a>) &#8211; &#8220;eGFR60&#8221; - recipient eGFR at 60 months</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_forename">
+<code class="descname">recip_forename</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_forename" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_surname">
+<code class="descname">recip_surname</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_surname" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.rdob">
+<code class="descname">rdob</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.rdob" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.rnhs_no">
+<code class="descname">rnhs_no</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.rnhs_no" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.rpostcode">
+<code class="descname">rpostcode</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.rpostcode" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_residence">
+<code class="descname">recip_residence</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_residence" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.rsex">
+<code class="descname">rsex</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.rsex" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.rethnic">
+<code class="descname">rethnic</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.rethnic" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.rbg">
+<code class="descname">rbg</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.rbg" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.rrhesus">
+<code class="descname">rrhesus</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.rrhesus" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_id">
+<code class="descname">recip_id</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.rdod">
+<code class="descname">rdod</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.rdod" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_forename">
+<code class="descname">donor_forename</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_forename" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_surname">
+<code class="descname">donor_surname</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_surname" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.ddob">
+<code class="descname">ddob</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.ddob" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dnhs_no">
+<code class="descname">dnhs_no</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dnhs_no" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_postcode">
+<code class="descname">donor_postcode</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_postcode" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dresidence">
+<code class="descname">dresidence</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dresidence" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dsex">
+<code class="descname">dsex</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dsex" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dethnic">
+<code class="descname">dethnic</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dethnic" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dbg">
+<code class="descname">dbg</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dbg" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.drhesus">
+<code class="descname">drhesus</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.drhesus" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_id">
+<code class="descname">donor_id</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dage">
+<code class="descname">dage</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dage" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dcod">
+<code class="descname">dcod</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dcod" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dhtlv">
+<code class="descname">dhtlv</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dhtlv" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dsyphilis">
+<code class="descname">dsyphilis</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dsyphilis" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dpast_alcohol_abuse">
+<code class="descname">dpast_alcohol_abuse</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dpast_alcohol_abuse" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dpast_cardio_disease">
+<code class="descname">dpast_cardio_disease</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dpast_cardio_disease" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dpast_diabetes">
+<code class="descname">dpast_diabetes</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dpast_diabetes" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dpast_drug_abuse">
+<code class="descname">dpast_drug_abuse</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dpast_drug_abuse" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dpast_hypertension">
+<code class="descname">dpast_hypertension</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dpast_hypertension" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dpast_liver_disease">
+<code class="descname">dpast_liver_disease</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dpast_liver_disease" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dpast_other">
+<code class="descname">dpast_other</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dpast_other" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dpast_other_details">
+<code class="descname">dpast_other_details</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dpast_other_details" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dpast_smoker">
+<code class="descname">dpast_smoker</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dpast_smoker" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dpast_smoker_amount">
+<code class="descname">dpast_smoker_amount</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dpast_smoker_amount" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dpast_tumour">
+<code class="descname">dpast_tumour</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dpast_tumour" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dpast_uti">
+<code class="descname">dpast_uti</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dpast_uti" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dpast_family_diabetes">
+<code class="descname">dpast_family_diabetes</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dpast_family_diabetes" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dpast_family_diabetes_type">
+<code class="descname">dpast_family_diabetes_type</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dpast_family_diabetes_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dial_at_tx">
+<code class="descname">dial_at_tx</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dial_at_tx" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dial_at_tx_type">
+<code class="descname">dial_at_tx_type</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dial_at_tx_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dial_start_date">
+<code class="descname">dial_start_date</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dial_start_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dial_end_date">
+<code class="descname">dial_end_date</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dial_end_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.no_prev_tx">
+<code class="descname">no_prev_tx</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.no_prev_tx" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.tx_date">
+<code class="descname">tx_date</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.tx_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.rec_unit">
+<code class="descname">rec_unit</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.rec_unit" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.rhosp_no">
+<code class="descname">rhosp_no</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.rhosp_no" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dtype">
+<code class="descname">dtype</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dtype" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.rltnship">
+<code class="descname">rltnship</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.rltnship" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.relationship_details">
+<code class="descname">relationship_details</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.relationship_details" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.laterality">
+<code class="descname">laterality</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.laterality" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.tx_type">
+<code class="descname">tx_type</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.tx_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.local">
+<code class="descname">local</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.local" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.faildate">
+<code class="descname">faildate</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.faildate" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.aitx_type">
+<code class="descname">aitx_type</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.aitx_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.cit_hrs">
+<code class="descname">cit_hrs</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.cit_hrs" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.fwit">
+<code class="descname">fwit</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.fwit" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.swit">
+<code class="descname">swit</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.swit" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.amm">
+<code class="descname">amm</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.amm" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.bmm">
+<code class="descname">bmm</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.bmm" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.drmm">
+<code class="descname">drmm</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.drmm" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_hla_sample_date">
+<code class="descname">recip_hla_sample_date</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_hla_sample_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_first_a_broad">
+<code class="descname">recip_first_a_broad</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_first_a_broad" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_first_a_split">
+<code class="descname">recip_first_a_split</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_first_a_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_second_a_broad">
+<code class="descname">recip_second_a_broad</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_second_a_broad" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_second_a_split">
+<code class="descname">recip_second_a_split</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_second_a_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_first_b_broad">
+<code class="descname">recip_first_b_broad</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_first_b_broad" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_first_b_split">
+<code class="descname">recip_first_b_split</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_first_b_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_second_b_broad">
+<code class="descname">recip_second_b_broad</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_second_b_broad" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_second_b_split">
+<code class="descname">recip_second_b_split</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_second_b_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_first_c_broad">
+<code class="descname">recip_first_c_broad</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_first_c_broad" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_first_c_split">
+<code class="descname">recip_first_c_split</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_first_c_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_second_c_broad">
+<code class="descname">recip_second_c_broad</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_second_c_broad" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_second_c_split">
+<code class="descname">recip_second_c_split</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_second_c_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_first_dr_broad">
+<code class="descname">recip_first_dr_broad</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_first_dr_broad" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_first_dr_split">
+<code class="descname">recip_first_dr_split</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_first_dr_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_second_dr_broad">
+<code class="descname">recip_second_dr_broad</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_second_dr_broad" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_second_dr_split">
+<code class="descname">recip_second_dr_split</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_second_dr_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_first_dp_broad">
+<code class="descname">recip_first_dp_broad</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_first_dp_broad" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_first_dp_split">
+<code class="descname">recip_first_dp_split</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_first_dp_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_second_dp_broad">
+<code class="descname">recip_second_dp_broad</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_second_dp_broad" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_second_dp_split">
+<code class="descname">recip_second_dp_split</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_second_dp_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_first_dq_broad">
+<code class="descname">recip_first_dq_broad</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_first_dq_broad" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_first_dq_split">
+<code class="descname">recip_first_dq_split</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_first_dq_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_second_dq_broad">
+<code class="descname">recip_second_dq_broad</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_second_dq_broad" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.recip_second_dq_split">
+<code class="descname">recip_second_dq_split</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.recip_second_dq_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_hla_sample_date">
+<code class="descname">donor_hla_sample_date</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_hla_sample_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_first_a_broad">
+<code class="descname">donor_first_a_broad</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_first_a_broad" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_first_a_split">
+<code class="descname">donor_first_a_split</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_first_a_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_second_a_broad">
+<code class="descname">donor_second_a_broad</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_second_a_broad" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_second_a_split">
+<code class="descname">donor_second_a_split</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_second_a_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_first_b_broad">
+<code class="descname">donor_first_b_broad</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_first_b_broad" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_first_b_split">
+<code class="descname">donor_first_b_split</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_first_b_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_second_b_broad">
+<code class="descname">donor_second_b_broad</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_second_b_broad" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_second_b_split">
+<code class="descname">donor_second_b_split</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_second_b_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_first_c_broad">
+<code class="descname">donor_first_c_broad</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_first_c_broad" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_first_c_split">
+<code class="descname">donor_first_c_split</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_first_c_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_second_c_broad">
+<code class="descname">donor_second_c_broad</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_second_c_broad" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_second_c_split">
+<code class="descname">donor_second_c_split</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_second_c_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_first_dr_broad">
+<code class="descname">donor_first_dr_broad</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_first_dr_broad" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_first_dr_split">
+<code class="descname">donor_first_dr_split</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_first_dr_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_second_dr_broad">
+<code class="descname">donor_second_dr_broad</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_second_dr_broad" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_second_dr_split">
+<code class="descname">donor_second_dr_split</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_second_dr_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_first_dp_broad">
+<code class="descname">donor_first_dp_broad</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_first_dp_broad" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_first_dp_split">
+<code class="descname">donor_first_dp_split</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_first_dp_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_second_dp_broad">
+<code class="descname">donor_second_dp_broad</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_second_dp_broad" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_second_dp_split">
+<code class="descname">donor_second_dp_split</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_second_dp_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_first_dq_broad">
+<code class="descname">donor_first_dq_broad</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_first_dq_broad" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_first_dq_split">
+<code class="descname">donor_first_dq_split</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_first_dq_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_second_dq_broad">
+<code class="descname">donor_second_dq_broad</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_second_dq_broad" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.donor_second_dq_split">
+<code class="descname">donor_second_dq_split</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.donor_second_dq_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.cyclosporin">
+<code class="descname">cyclosporin</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.cyclosporin" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.mycophenolate_mofetil">
+<code class="descname">mycophenolate_mofetil</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.mycophenolate_mofetil" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.other_immuno_drug">
+<code class="descname">other_immuno_drug</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.other_immuno_drug" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.immuno_text">
+<code class="descname">immuno_text</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.immuno_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.prednisolone_prednisone">
+<code class="descname">prednisolone_prednisone</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.prednisolone_prednisone" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.tacrolimus">
+<code class="descname">tacrolimus</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.tacrolimus" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.azathioprine">
+<code class="descname">azathioprine</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.azathioprine" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.alg_atg">
+<code class="descname">alg_atg</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.alg_atg" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.okt3">
+<code class="descname">okt3</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.okt3" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.rcmv">
+<code class="descname">rcmv</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.rcmv" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.rhiv">
+<code class="descname">rhiv</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.rhiv" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.debv">
+<code class="descname">debv</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.debv" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dtoxo">
+<code class="descname">dtoxo</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dtoxo" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dhiv">
+<code class="descname">dhiv</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dhiv" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dgf">
+<code class="descname">dgf</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dgf" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.resume_dialysis_date">
+<code class="descname">resume_dialysis_date</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.resume_dialysis_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.rheight">
+<code class="descname">rheight</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.rheight" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.rweight">
+<code class="descname">rweight</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.rweight" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.serum3">
+<code class="descname">serum3</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.serum3" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.scdate3">
+<code class="descname">scdate3</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.scdate3" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.serum12">
+<code class="descname">serum12</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.serum12" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.scdate12">
+<code class="descname">scdate12</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.scdate12" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.serum24">
+<code class="descname">serum24</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.serum24" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.scdate24">
+<code class="descname">scdate24</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.scdate24" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.serum36">
+<code class="descname">serum36</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.serum36" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.scdate36">
+<code class="descname">scdate36</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.scdate36" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.serum48">
+<code class="descname">serum48</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.serum48" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.scdate48">
+<code class="descname">scdate48</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.scdate48" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.serum60">
+<code class="descname">serum60</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.serum60" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.scdate60">
+<code class="descname">scdate60</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.scdate60" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.rbhv">
+<code class="descname">rbhv</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.rbhv" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.rhcv">
+<code class="descname">rhcv</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.rhcv" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dhbcab">
+<code class="descname">dhbcab</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dhbcab" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dhbsag">
+<code class="descname">dhbsag</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dhbsag" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.dhcv">
+<code class="descname">dhcv</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.dhcv" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.egfr3">
+<code class="descname">egfr3</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.egfr3" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.egfr12">
+<code class="descname">egfr12</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.egfr12" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.egfr24">
+<code class="descname">egfr24</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.egfr24" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.egfr36">
+<code class="descname">egfr36</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.egfr36" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.egfr48">
+<code class="descname">egfr48</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.egfr48" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.egfr60">
+<code class="descname">egfr60</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.egfr60" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descclassname">NHSBTRecord.</code><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.id">
+<code class="descclassname">NHSBTRecord.</code><code class="descname">id</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTRecord.nhsbtlog_set">
+<code class="descclassname">NHSBTRecord.</code><code class="descname">nhsbtlog_set</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTRecord.nhsbtlog_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">parent.children</span></code> is a <code class="docutils literal"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="diakonia.eyeaux.models.NHSBTLog">
+<em class="property">class </em><code class="descclassname">diakonia.eyeaux.models.</code><code class="descname">NHSBTLog</code><span class="sig-paren">(</span><em>id</em>, <em>file</em>, <em>record</em>, <em>changed_fields</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/diakonia/eyeaux/models.html#NHSBTLog"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTLog" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.AutoField" title="(in Django v1.10)"><em>django.db.models.AutoField</em></a>) &#8211; &#8220;ID&#8221;</li>
+<li><strong>file_id</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.ForeignKey" title="(in Django v1.10)"><em>django.db.models.ForeignKey</em></a>) &#8211; &#8220;file&#8221;</li>
+<li><strong>record_id</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.ForeignKey" title="(in Django v1.10)"><em>django.db.models.ForeignKey</em></a>) &#8211; &#8220;record&#8221;</li>
+<li><strong>changed_fields</strong> (<a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.TextField" title="(in Django v1.10)"><em>django.db.models.TextField</em></a>) &#8211; &#8220;changed fields&#8221;</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTLog.file">
+<code class="descname">file</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTLog.file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">child.parent</span></code> is a <code class="docutils literal"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTLog.record">
+<code class="descname">record</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTLog.record" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">child.parent</span></code> is a <code class="docutils literal"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTLog.changed_fields">
+<code class="descname">changed_fields</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTLog.changed_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="diakonia.eyeaux.models.NHSBTLog.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTLog.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="diakonia.eyeaux.models.NHSBTLog.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descclassname">NHSBTLog.</code><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTLog.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTLog.file_id">
+<code class="descclassname">NHSBTLog.</code><code class="descname">file_id</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTLog.file_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTLog.id">
+<code class="descclassname">NHSBTLog.</code><code class="descname">id</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTLog.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="diakonia.eyeaux.models.NHSBTLog.record_id">
+<code class="descclassname">NHSBTLog.</code><code class="descname">record_id</code><a class="headerlink" href="#diakonia.eyeaux.models.NHSBTLog.record_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 
 
