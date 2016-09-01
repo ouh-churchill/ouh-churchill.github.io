@@ -11,11 +11,17 @@ maintenance. If you have any questions, please contact the main author Carl Mars
 
 Quick links:
 
+* This documentation is online at https://ouh-churchill.github.io/index.html
+* The repository is at https://github.com/ouh-churchill/diakonia
+* The project management (Waffle.io) screen is at https://waffle.io/ouh-churchill/diakonia
+
 Contents
 --------
 
 .. toctree::
    :maxdepth: 2
+   :caption: Table of Contents
+   :name: mastertoc
 
    _source/introduction
    _source/requirements
@@ -24,7 +30,6 @@ Contents
    _source/BMT/index
    _source/NHIC/index
    _source/FHIRstation/index
-   _source/FHIRstation/tests
    _source/PancreasDB/index
    _source/TransplantEPR/index
    _source/notes
