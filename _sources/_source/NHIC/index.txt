@@ -1,5 +1,5 @@
 NHIC-TRA Project
-====
+================
 
 .. toctree::
    :maxdepth: 2
@@ -9,7 +9,7 @@ NHIC-TRA Project
    mapping_notes
 
 Data models
-----
+-----------
 .. autosummary::
    :toctree: generated
 

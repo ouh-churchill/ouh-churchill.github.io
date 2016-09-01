@@ -1,5 +1,5 @@
 FHIRstation Project
-====
+===================
 
 .. toctree::
 
@@ -7,7 +7,7 @@ FHIRstation Project
    tests
 
 Data models
-----
+-----------
 .. autosummary::
    :toctree: generated
 
