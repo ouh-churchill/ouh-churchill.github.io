@@ -148,14 +148,14 @@
             
   <div class="section" id="project-setup-notes">
 <span id="project-setup-notes"></span><h1>Project Setup Notes<a class="headerlink" href="#project-setup-notes" title="Permalink to this headline">¶</a></h1>
-<p>Starting with notes from <a class="reference external" href="#">https://github.com/AllyBradley/COPE/blob/master/docs/deployment.rst</a> and <code class="docutils literal"><span class="pre">development.rst</span></code>. Note that development doesn’t talk about starting a new project with virtualenv!</p>
+<p>Starting with notes from <a class="reference external" href="https://github.com/AllyBradley/COPE/blob/master/docs/deployment.rst">https://github.com/AllyBradley/COPE/blob/master/docs/deployment.rst</a> and <code class="docutils literal"><span class="pre">development.rst</span></code>. Note that development doesn’t talk about starting a new project with virtualenv!</p>
 <p>Need to make a project directory using python 3.5.2 (latest as of time of writing)
-<a class="reference external" href="#">http://stackoverflow.com/questions/1534210/use-different-python-version-with-virtualenv</a></p>
+<a class="reference external" href="http://stackoverflow.com/questions/1534210/use-different-python-version-with-virtualenv">http://stackoverflow.com/questions/1534210/use-different-python-version-with-virtualenv</a></p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">mkproject</span> <span class="pre">-p</span> <span class="pre">/usr/local/bin/python3</span> <span class="pre">diakonia</span></code></li>
 </ul>
 <p>Results in us going to <code class="docutils literal"><span class="pre">/Users/$USER$/Projects/diakonia</span></code></p>
-<p>Create a project on github : <a class="reference external" href="#">https://github.com/ouh-churchill/diakoinia</a>, then clone it…</p>
+<p>Create a project on github : <a class="reference external" href="https://github.com/ouh-churchill/diakoinia]">https://github.com/ouh-churchill/diakoinia</a>, then clone it…</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">git&#64;github.com:ouh-churchill/diakonia.git</span> <span class="pre">diakonia-repo</span></code></li>
 <li><code class="docutils literal"><span class="pre">ln</span> <span class="pre">-s</span> <span class="pre">~/.virtualenvs/diakonia/lib</span> <span class="pre">./lib</span></code></li>
@@ -179,7 +179,7 @@
 <li>Edit <code class="docutils literal"><span class="pre">manage.py</span></code> and <code class="docutils literal"><span class="pre">wsgi.py</span></code> to point at <code class="docutils literal"><span class="pre">“config.settings”</span></code></li>
 </ul>
 <p>After that, PyCharm will want a few settings tweaks (like Django support enabling, and pointing at the settings files). I tend to hold of on this until I&#8217;ve also sorted out the setup of Best Practice for settings and other folders/files that form part of the project boilerplate.</p>
-<p><a class="reference external" href="#">http://v4-alpha.getbootstrap.com</a></p>
+<p><a class="reference external" href="http://v4-alpha.getbootstrap.com">http://v4-alpha.getbootstrap.com</a></p>
 </div>
 </div>
 <div class="section" id="dev-system-notes">
@@ -190,8 +190,8 @@
 <p>Homebrew supports the latest version of software, and one or two older versions. For FHIRbase to install locally we need the following stack:</p>
 <ul class="simple">
 <li>Postgres (v9.5.3 currently)</li>
-<li>FHIRbase(2) - <a class="reference external" href="#">https://github.com/fhirbase/fhirbase-plv8</a> (v1.4.0 currently)</li>
-<li>plv8 - <a class="reference external" href="#">https://github.com/plv8/plv8 http://pgxn.org/dist/plv8/</a>- (current is v1.5.3, but using v1.4.3 because it supports the older version of v8 available from the Homebrew Version archive)</li>
+<li>FHIRbase(2) - <a class="reference external" href="https://github.com/fhirbase/fhirbase-plv8">https://github.com/fhirbase/fhirbase-plv8</a> (v1.4.0 currently)</li>
+<li>plv8 - [https://github.com/plv8/plv8 http://pgxn.org/dist/plv8/](https://github.com/plv8/plv8 http://pgxn.org/dist/plv8/)- (current is v1.5.3, but using v1.4.3 because it supports the older version of v8 available from the Homebrew Version archive)</li>
 <li>v8 - via Homebrew Versions archive - (current is v5.1; but using v3.15 as this is the only historic version at present available)</li>
 </ul>
 <p>Can now condense this down to the following:</p>
@@ -199,7 +199,7 @@
 <li><code class="docutils literal"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">v8-315</span></code> &#8211; only works since June 2016</li>
 <li><code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pgxnclient</span></code></li>
 <li><code class="docutils literal"><span class="pre">LIBRARY_PATH=&quot;/usr/local/opt/v8-315/lib&quot;</span> <span class="pre">CPATH=&quot;/usr/local/opt/v8-315/include&quot;</span> <span class="pre">pgxnclient</span> <span class="pre">install</span> <span class="pre">plv8=1.4.3</span></code></li>
-<li>Then we follow <a class="reference external" href="#">https://github.com/fhirbase/fhirbase-plv8#installation</a><ul>
+<li>Then we follow <a class="reference external" href="https://github.com/fhirbase/fhirbase-plv8#installation">https://github.com/fhirbase/fhirbase-plv8#installation</a><ul>
 <li><code class="docutils literal"><span class="pre">psql</span> <span class="pre">-d</span> <span class="pre">postgres</span></code> &#8211; because there isn&#8217;t a DB named after the local user. We now are in the PSQL CLI:</li>
 <li><code class="docutils literal"><span class="pre">CREATE</span> <span class="pre">DATABASE</span> <span class="pre">fhirbase;</span></code>. Then exit CLI</li>
 <li><code class="docutils literal"><span class="pre">export</span> <span class="pre">DATABASE_URL=postgres://user:password&#64;localhost:5432/fhirbase</span></code> &#8211; remember to escape any symbols in password</li>
@@ -231,7 +231,7 @@
 <li>For the quick, it can be: <code class="docutils literal"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.;git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">'updates';git</span> <span class="pre">push</span></code></li>
 </ul>
 </li>
-<li>Online documents can then be seen at <a class="reference external" href="#">https://ouh-churchill.github.io</a></li>
+<li>Online documents can then be seen at <a class="reference external" href="https://ouh-churchill.github.io">https://ouh-churchill.github.io</a></li>
 </ul>
 </div>
 </div>
