@@ -16,6 +16,9 @@ diakonia.eyeaux.models
       NHSBTFile
       NHSBTLog
       NHSBTRecord
+      PSSPerson
+      PSSlimsResult
+      PSSmicroResult
    
    
 
