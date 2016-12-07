@@ -31,13 +31,13 @@ This list is still a work in progress, and the ordering doesn't indicate priorit
 2. Offer Review
 3. KP DB
 3. Recipient follow-up
- * Post Listing
- * Post Transplant
+   * Post Listing
+   * Post Transplant
 4. Patient Summary & Flow Tracking
 5. EOS Integration and Digitisation
 6. Reporting
- * Financial
- * Weekly Review
+   * Financial
+   * Weekly Review
 7. Referral Data Gathering
 
 Key Links
