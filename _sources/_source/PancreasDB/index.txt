@@ -1,6 +1,15 @@
 Pancreas DB Project
 ===================
 
+.. toctree::
+   :maxdepth: 2
+
+   introduction
+   notes
+   requirements
+   governance
+   infrastructure
+
 See the project Introduction for more details
 
 Outline
@@ -38,13 +47,3 @@ Key Links
 * The project task board at https://waffle.io/ouh-churchill/diakonia
 * The test server - TBC
 * The live services - TBA
-
-
-.. toctree::
-   :maxdepth: 2
-
-   introduction
-   notes
-   requirements
-   governance
-   infrastructure
