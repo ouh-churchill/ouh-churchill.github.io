@@ -2,6 +2,7 @@ Pancreas DB Project
 ===================
 
 .. toctree::
+   :hidden:
    :maxdepth: 2
 
    introduction
