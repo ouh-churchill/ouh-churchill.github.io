@@ -13,6 +13,7 @@ Pancreas DB Project
 
 See the project Introduction for more details
 
+
 Outline
 -------
 **Name**: Pancreas DB
@@ -31,15 +32,20 @@ This list is still a work in progress, and the ordering doesn't indicate priorit
 1. Referral Acceptance  <-- Starting Point for this project
 2. Offer Review
 3. KP DB
-3. Recipient follow-up
+4. Recipient follow-up
+
    * Post Listing
    * Post Transplant
-4. Patient Summary & Flow Tracking
-5. EOS Integration and Digitisation
-6. Reporting
+
+5. Patient Summary & Flow Tracking
+6. EOS Integration and Digitisation
+7. Reporting
+
    * Financial
    * Weekly Review
-7. Referral Data Gathering
+
+8. Referral Data Gathering
+
 
 Key Links
 ---------
