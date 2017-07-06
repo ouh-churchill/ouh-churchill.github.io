@@ -8,9 +8,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Database Requirement Notes from IQ &mdash; Diakonia v0.2.1 documentation</title>
+  <title>Database Requirement Notes from IQ &mdash; Diakonia v0.2.2 documentation</title>
   
 
+  
+  
   
   
 
@@ -33,8 +35,8 @@
         <link rel="index" title="Index"
               href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="Diakonia v0.2.1 documentation" href="../../index.html"/>
-        <link rel="up" title="NHIC-TRA Project" href="index.html"/>
+    <link rel="top" title="Diakonia v0.2.2 documentation" href="../../index.html"/>
+        <link rel="up" title="Transplant EPR Project" href="index.html"/>
         <link rel="next" title="Transplant Pathways" href="Transplant_Pathway.html"/>
         <link rel="prev" title="Transplant EPR Project" href="introduction.html"/> 
 
@@ -45,6 +47,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -64,7 +67,7 @@
             
             
               <div class="version">
-                v0.2.1
+                v0.2.2
               </div>
             
           
@@ -85,7 +88,10 @@
           
             
             
-                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../introduction.html">About Diakonia</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements</a></li>
@@ -96,7 +102,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../NHIC/index.html">NHIC-TRA Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../FHIRstation/index.html">FHIRstation Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../PancreasDB/index.html">Pancreas DB Project</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">NHIC-TRA Project</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Transplant EPR Project</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="introduction.html">Transplant EPR Project</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Database Requirement Notes from IQ</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#general">General</a><ul>
@@ -178,8 +184,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../index.html">Diakonia</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Diakonia</a>
+        
       </nav>
 
 
@@ -188,25 +196,42 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../../index.html">Docs</a> &raquo;</li>
-      
-          <li><a href="index.html">NHIC-TRA Project</a> &raquo;</li>
-      
-    <li>Database Requirement Notes from IQ</li>
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Transplant EPR Project</a> &raquo;</li>
+        
+      <li>Database Requirement Notes from IQ</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/_source/TransplantEPR/IQ_requirements.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../../_sources/_source/TransplantEPR/IQ_requirements.md.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -310,7 +335,7 @@
 <ol class="simple">
 <li>HBD/NHBD</li>
 <li>Retrieval Team</li>
-<li>Surgeon&#8217;s Name</li>
+<li>Surgeon's Name</li>
 <li>Organs retrieved</li>
 <li>Perfusion solution</li>
 <li>Retrieval times</li>
@@ -501,7 +526,7 @@
 <li>Y/N</li>
 <li>Cause of renal failure</li>
 <li>Polycystic Kidneys - UTIs Y/N; Bleeds Y/N; Large kidneys Y/N; Previous nephrectomies</li>
-<li>Lupus - Antibodies Y/N; Previous thrombotic events: DVT&#8217;s / Pulmonary Embolism / Miscarriage / Recurrant thrombosis of AVF; Previous treatment</li>
+<li>Lupus - Antibodies Y/N; Previous thrombotic events: DVT's / Pulmonary Embolism / Miscarriage / Recurrant thrombosis of AVF; Previous treatment</li>
 <li>FSGS (focal segmental glomerulo sclerosis) - Fulminant; Recurrance; Type of treatment</li>
 <li>Biopsy proven Y/N</li>
 <li>Predialysis / dialysis</li>
@@ -653,9 +678,9 @@
 <li>Extent - Toes; Forefoot; BKA (Below Knee); AKA (Above Knee);</li>
 <li>Ulcers Y/N</li>
 <li>MI Y/N</li>
-<li>CVA (stroke) Y/N  &lt;&#8211; system alert need or carotid duplex</li>
+<li>CVA (stroke) Y/N  &lt;-- system alert need or carotid duplex</li>
 <li>Stroke Y/N</li>
-<li>Clauidication Y/N  &lt;&#8211; system alert - lower limb &amp; iliac duplex</li>
+<li>Clauidication Y/N  &lt;-- system alert - lower limb &amp; iliac duplex</li>
 <li>Distance</li>
 <li>Admissions during last year</li>
 <li>Transfusion or possible sensitisation events</li>
@@ -785,8 +810,8 @@
 <div class="section" id="transplant">
 <span id="id7"></span><h2>8: Transplant<a class="headerlink" href="#transplant" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Surgeon&#8217;s name</li>
-<li>Assistant&#8217;s name</li>
+<li>Surgeon's name</li>
+<li>Assistant's name</li>
 <li>Consultant in charge</li>
 </ul>
 <div class="section" id="templates-for-operations-and-back-table">
@@ -804,15 +829,18 @@
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Transplant_Pathway.html" class="btn btn-neutral float-right" title="Transplant Pathways" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Transplant_Pathway.html" class="btn btn-neutral float-right" title="Transplant Pathways" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="introduction.html" class="btn btn-neutral" title="Transplant EPR Project" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="introduction.html" class="btn btn-neutral" title="Transplant EPR Project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -843,10 +871,11 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'v0.2.1',
+            VERSION:'v0.2.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

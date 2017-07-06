@@ -8,9 +8,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Project Setup Notes &mdash; Diakonia v0.2.1 documentation</title>
+  <title>Project Setup Notes &mdash; Diakonia v0.2.2 documentation</title>
   
 
+  
+  
   
   
 
@@ -33,7 +35,7 @@
         <link rel="index" title="Index"
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Diakonia v0.2.1 documentation" href="../index.html"/>
+    <link rel="top" title="Diakonia v0.2.2 documentation" href="../index.html"/>
         <link rel="next" title="BMT Project" href="BMT/index.html"/>
         <link rel="prev" title="User Stories" href="user_stories.html"/> 
 
@@ -44,6 +46,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -63,7 +66,7 @@
             
             
               <div class="version">
-                v0.2.1
+                v0.2.2
               </div>
             
           
@@ -84,7 +87,10 @@
           
             
             
-                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">About Diakonia</a></li>
 <li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
@@ -102,7 +108,7 @@
 <li class="toctree-l1"><a class="reference internal" href="NHIC/index.html">NHIC-TRA Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FHIRstation/index.html">FHIRstation Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PancreasDB/index.html">Pancreas DB Project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TransplantEPR/index.html">NHIC-TRA Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TransplantEPR/index.html">Transplant EPR Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notes.html">Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="project_management.html">Project Management</a></li>
 </ul>
@@ -117,8 +123,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">Diakonia</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Diakonia</a>
+        
       </nav>
 
 
@@ -127,23 +135,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
-    <li>Project Setup Notes</li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Project Setup Notes</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/_source/development.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/_source/development.md.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -181,7 +206,7 @@
 <li>Move and rename <code class="docutils literal"><span class="pre">diakonia/</span></code> to <code class="docutils literal"><span class="pre">diakonia-repo/config/</span></code></li>
 <li>Edit <code class="docutils literal"><span class="pre">manage.py</span></code> and <code class="docutils literal"><span class="pre">wsgi.py</span></code> to point at <code class="docutils literal"><span class="pre">“config.settings”</span></code></li>
 </ul>
-<p>After that, PyCharm will want a few settings tweaks (like Django support enabling, and pointing at the settings files). I tend to hold of on this until I&#8217;ve also sorted out the setup of Best Practice for settings and other folders/files that form part of the project boilerplate.</p>
+<p>After that, PyCharm will want a few settings tweaks (like Django support enabling, and pointing at the settings files). I tend to hold of on this until I've also sorted out the setup of Best Practice for settings and other folders/files that form part of the project boilerplate.</p>
 <p><a class="reference external" href="http://v4-alpha.getbootstrap.com">http://v4-alpha.getbootstrap.com</a></p>
 </div>
 </div>
@@ -199,13 +224,13 @@
 </ul>
 <p>Can now condense this down to the following:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">v8-315</span></code> &#8211; only works since June 2016</li>
+<li><code class="docutils literal"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">v8-315</span></code> -- only works since June 2016</li>
 <li><code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pgxnclient</span></code></li>
 <li><code class="docutils literal"><span class="pre">LIBRARY_PATH=&quot;/usr/local/opt/v8-315/lib&quot;</span> <span class="pre">CPATH=&quot;/usr/local/opt/v8-315/include&quot;</span> <span class="pre">pgxnclient</span> <span class="pre">install</span> <span class="pre">plv8=1.4.3</span></code></li>
 <li>Then we follow <a class="reference external" href="https://github.com/fhirbase/fhirbase-plv8#installation">https://github.com/fhirbase/fhirbase-plv8#installation</a><ul>
-<li><code class="docutils literal"><span class="pre">psql</span> <span class="pre">-d</span> <span class="pre">postgres</span></code> &#8211; because there isn&#8217;t a DB named after the local user. We now are in the PSQL CLI:</li>
+<li><code class="docutils literal"><span class="pre">psql</span> <span class="pre">-d</span> <span class="pre">postgres</span></code> -- because there isn't a DB named after the local user. We now are in the PSQL CLI:</li>
 <li><code class="docutils literal"><span class="pre">CREATE</span> <span class="pre">DATABASE</span> <span class="pre">fhirbase;</span></code>. Then exit CLI</li>
-<li><code class="docutils literal"><span class="pre">export</span> <span class="pre">DATABASE_URL=postgres://user:password&#64;localhost:5432/fhirbase</span></code> &#8211; remember to escape any symbols in password</li>
+<li><code class="docutils literal"><span class="pre">export</span> <span class="pre">DATABASE_URL=postgres://user:password&#64;localhost:5432/fhirbase</span></code> -- remember to escape any symbols in password</li>
 <li><code class="docutils literal"><span class="pre">wget</span> <span class="pre">https://github.com/fhirbase/fhirbase-plv8/releases/download/v1.4.0.0/fhirbase-1.4.0.0.sql.zip</span></code></li>
 <li><code class="docutils literal"><span class="pre">unzip</span> <span class="pre">fhirbase-1.4.0.0.sql.zip</span></code></li>
 <li><code class="docutils literal"><span class="pre">cat</span> <span class="pre">fhirbase-1.4.0.0.sql</span> <span class="pre">|</span> <span class="pre">psql</span> <span class="pre">fhirbase</span></code></li>
@@ -241,15 +266,18 @@
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="BMT/index.html" class="btn btn-neutral float-right" title="BMT Project" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="BMT/index.html" class="btn btn-neutral float-right" title="BMT Project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="user_stories.html" class="btn btn-neutral" title="User Stories" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="user_stories.html" class="btn btn-neutral" title="User Stories" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -280,10 +308,11 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'v0.2.1',
+            VERSION:'v0.2.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

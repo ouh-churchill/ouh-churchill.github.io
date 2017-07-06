@@ -8,9 +8,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Requirements &mdash; Diakonia v0.2.1 documentation</title>
+  <title>Requirements &mdash; Diakonia v0.2.2 documentation</title>
   
 
+  
+  
   
   
 
@@ -33,7 +35,7 @@
         <link rel="index" title="Index"
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Diakonia v0.2.1 documentation" href="../index.html"/>
+    <link rel="top" title="Diakonia v0.2.2 documentation" href="../index.html"/>
         <link rel="next" title="User Stories" href="user_stories.html"/>
         <link rel="prev" title="About Diakonia" href="introduction.html"/> 
 
@@ -44,6 +46,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -63,7 +66,7 @@
             
             
               <div class="version">
-                v0.2.1
+                v0.2.2
               </div>
             
           
@@ -84,7 +87,10 @@
           
             
             
-                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">About Diakonia</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Requirements</a><ul>
@@ -101,7 +107,7 @@
 <li class="toctree-l1"><a class="reference internal" href="NHIC/index.html">NHIC-TRA Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FHIRstation/index.html">FHIRstation Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PancreasDB/index.html">Pancreas DB Project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TransplantEPR/index.html">NHIC-TRA Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TransplantEPR/index.html">Transplant EPR Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notes.html">Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="project_management.html">Project Management</a></li>
 </ul>
@@ -116,8 +122,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">Diakonia</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Diakonia</a>
+        
       </nav>
 
 
@@ -126,23 +134,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
-    <li>Requirements</li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Requirements</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/_source/requirements.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/_source/requirements.md.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -155,7 +180,7 @@
 <ul class="simple">
 <li>There will need to be a way to link to and from requirements. This will mean implementing a naming/tagging scheme for linking work tasks back to requirements; and a reference scheme for linking requirements to sources</li>
 <li>Some of the sources are likely to be people, but they should be abstracted to be role related requirements (i.e. the role of the person, rather than the actual person). To help with auditing and feedback though, an offline reference list of specific requirements from specific individuals may be needed (To be discussed further)</li>
-<li>The expectation is that we&#8217;ll use the repository Issues system to track work items, which means having a stable set of URIs for referring to the requirements</li>
+<li>The expectation is that we'll use the repository Issues system to track work items, which means having a stable set of URIs for referring to the requirements</li>
 <li>Documentation for this project (and sub-projects) will be a priority (and therefore a high priority Non-functional Requirement in itself), and the planned toolchain will have us using Sphinx to compile and index the documents and files, with developer contributed content coming in the form of plain text files (either .md Markdown, or .rst ReStructured Text)</li>
 <li>We still need to choose and adopt a suitable template for requirements gathering and reporting. Some examples can be seen at:<ul>
 <li><a class="reference external" href="http://stackoverflow.com/questions/171653/examples-of-requirement-documents">http://stackoverflow.com/questions/171653/examples-of-requirement-documents</a></li>
@@ -175,7 +200,7 @@
 </li>
 <li>SNOMED CT used as the standard for clinical data coding. The NHS National Information Board (NIB) <a class="reference external" href="http://systems.digital.nhs.uk/data/uktc/snomed">has specified that</a> SNOMED CT is to be used as the single terminology in all care settings in England. The move to using a single common terminology in electronic integrated care records means:<ul>
 <li>information can be shared consistently within and across all health and care settings</li>
-<li>data can be organised for the benefit of the individual&#8217;s care, for example highlighting current health problems</li>
+<li>data can be organised for the benefit of the individual's care, for example highlighting current health problems</li>
 <li>data can be organised for the benefit of groups of individuals, for example identifying trends resulting from change in clinical practice</li>
 <li>the risk of different interpretations of the record between different care settings can be reduced.</li>
 </ul>
@@ -187,15 +212,18 @@
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="user_stories.html" class="btn btn-neutral float-right" title="User Stories" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="user_stories.html" class="btn btn-neutral float-right" title="User Stories" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="introduction.html" class="btn btn-neutral" title="About Diakonia" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="introduction.html" class="btn btn-neutral" title="About Diakonia" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -226,10 +254,11 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'v0.2.1',
+            VERSION:'v0.2.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

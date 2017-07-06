@@ -8,9 +8,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>django.db.models.query_utils &mdash; Diakonia v0.2.1 documentation</title>
+  <title>django.db.models.query_utils &mdash; Diakonia v0.2.2 documentation</title>
   
 
+  
+  
   
   
 
@@ -33,7 +35,7 @@
         <link rel="index" title="Index"
               href="../../../../genindex.html"/>
         <link rel="search" title="Search" href="../../../../search.html"/>
-    <link rel="top" title="Diakonia v0.2.1 documentation" href="../../../../index.html"/>
+    <link rel="top" title="Diakonia v0.2.2 documentation" href="../../../../index.html"/>
         <link rel="up" title="Module code" href="../../../index.html"/> 
 
   
@@ -43,6 +45,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -62,7 +65,7 @@
             
             
               <div class="version">
-                v0.2.1
+                v0.2.2
               </div>
             
           
@@ -83,7 +86,10 @@
           
             
             
-                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../_source/introduction.html">About Diakonia</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../_source/requirements.html">Requirements</a></li>
@@ -94,7 +100,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../_source/NHIC/index.html">NHIC-TRA Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../_source/FHIRstation/index.html">FHIRstation Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../_source/PancreasDB/index.html">Pancreas DB Project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../_source/TransplantEPR/index.html">NHIC-TRA Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../_source/TransplantEPR/index.html">Transplant EPR Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../_source/notes.html">Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../_source/project_management.html">Project Management</a></li>
 </ul>
@@ -109,8 +115,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../../../index.html">Diakonia</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Diakonia</a>
+        
       </nav>
 
 
@@ -123,19 +131,36 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="../../../index.html">Module code</a> &raquo;</li>
-      
-    <li>django.db.models.query_utils</li>
+        
+      <li>django.db.models.query_utils</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -154,9 +179,9 @@
 <span class="kn">import</span> <span class="nn">inspect</span>
 <span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">namedtuple</span>
 
-<span class="kn">from</span> <span class="nn">django.core.exceptions</span> <span class="k">import</span> <span class="n">FieldDoesNotExist</span>
 <span class="kn">from</span> <span class="nn">django.db.models.constants</span> <span class="k">import</span> <span class="n">LOOKUP_SEP</span>
 <span class="kn">from</span> <span class="nn">django.utils</span> <span class="k">import</span> <span class="n">tree</span>
+<span class="kn">from</span> <span class="nn">django.utils.lru_cache</span> <span class="k">import</span> <span class="n">lru_cache</span>
 
 <span class="c1"># PathInfo is used when converting lookups (fk__somecol). The contents</span>
 <span class="c1"># describe the relation in Model terms (model Options and Fields for both</span>
@@ -169,6 +194,15 @@
 <span class="sd">    The query passed to raw isn&#39;t a safe query to use with raw.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span>
+
+
+<span class="k">def</span> <span class="nf">subclasses</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+    <span class="k">yield</span> <span class="bp">cls</span>
+    <span class="c1"># Python 2 lacks &#39;yield from&#39;, which could replace the inner loop</span>
+    <span class="k">for</span> <span class="n">subclass</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="n">__subclasses__</span><span class="p">():</span>
+        <span class="c1"># yield from subclasses(subclass)</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">subclasses</span><span class="p">(</span><span class="n">subclass</span><span class="p">):</span>
+            <span class="k">yield</span> <span class="n">item</span>
 
 
 <span class="k">class</span> <span class="nc">QueryWrapper</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
@@ -196,7 +230,7 @@
     <span class="n">default</span> <span class="o">=</span> <span class="n">AND</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">children</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">()))</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">children</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">()))</span>
 
     <span class="k">def</span> <span class="nf">_combine</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="n">conn</span><span class="p">):</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Q</span><span class="p">):</span>
@@ -235,26 +269,18 @@
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field_name</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">field_name</span> <span class="o">=</span> <span class="n">field_name</span>
 
-    <span class="k">def</span> <span class="nf">__get__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">cls</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__get__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="bp">cls</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Retrieves and caches the value from the datastore on the first lookup.</span>
 <span class="sd">        Returns the cached value.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">instance</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span>
-        <span class="n">opts</span> <span class="o">=</span> <span class="n">instance</span><span class="o">.</span><span class="n">_meta</span>
-        <span class="n">data</span> <span class="o">=</span> <span class="n">instance</span><span class="o">.</span><span class="n">__dict__</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">instance</span><span class="o">.</span><span class="vm">__dict__</span>
         <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">field_name</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span> <span class="ow">is</span> <span class="bp">self</span><span class="p">:</span>
-            <span class="c1"># self.field_name is the attname of the field, but only() takes the</span>
-            <span class="c1"># actual name, so we need to translate it here.</span>
-            <span class="k">try</span><span class="p">:</span>
-                <span class="n">f</span> <span class="o">=</span> <span class="n">opts</span><span class="o">.</span><span class="n">get_field</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">field_name</span><span class="p">)</span>
-            <span class="k">except</span> <span class="n">FieldDoesNotExist</span><span class="p">:</span>
-                <span class="n">f</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">opts</span><span class="o">.</span><span class="n">fields</span> <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">attname</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">field_name</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-            <span class="n">name</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">name</span>
             <span class="c1"># Let&#39;s see if the field is part of the parent chain. If so we</span>
             <span class="c1"># might be able to reuse the already loaded value. Refs #18343.</span>
-            <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_check_parent_chain</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_check_parent_chain</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">field_name</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">val</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="n">instance</span><span class="o">.</span><span class="n">refresh_from_db</span><span class="p">(</span><span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">field_name</span><span class="p">])</span>
                 <span class="n">val</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">field_name</span><span class="p">)</span>
@@ -276,20 +302,16 @@
 
 
 <span class="k">class</span> <span class="nc">RegisterLookupMixin</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">_get_lookup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lookup_name</span><span class="p">):</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">class_lookups</span><span class="p">[</span><span class="n">lookup_name</span><span class="p">]</span>
-        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
-            <span class="c1"># To allow for inheritance, check parent class&#39; class_lookups.</span>
-            <span class="k">for</span> <span class="n">parent</span> <span class="ow">in</span> <span class="n">inspect</span><span class="o">.</span><span class="n">getmro</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="p">):</span>
-                <span class="k">if</span> <span class="s1">&#39;class_lookups&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">parent</span><span class="o">.</span><span class="n">__dict__</span><span class="p">:</span>
-                    <span class="k">continue</span>
-                <span class="k">if</span> <span class="n">lookup_name</span> <span class="ow">in</span> <span class="n">parent</span><span class="o">.</span><span class="n">class_lookups</span><span class="p">:</span>
-                    <span class="k">return</span> <span class="n">parent</span><span class="o">.</span><span class="n">class_lookups</span><span class="p">[</span><span class="n">lookup_name</span><span class="p">]</span>
-        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
-            <span class="c1"># This class didn&#39;t have any class_lookups</span>
-            <span class="k">pass</span>
-        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_get_lookup</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">lookup_name</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">get_lookups</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">lookup_name</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="nd">@lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">get_lookups</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="n">class_lookups</span> <span class="o">=</span> <span class="p">[</span><span class="n">parent</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;class_lookups&#39;</span><span class="p">,</span> <span class="p">{})</span> <span class="k">for</span> <span class="n">parent</span> <span class="ow">in</span> <span class="n">inspect</span><span class="o">.</span><span class="n">getmro</span><span class="p">(</span><span class="bp">cls</span><span class="p">)]</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">merge_dicts</span><span class="p">(</span><span class="n">class_lookups</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">get_lookup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lookup_name</span><span class="p">):</span>
         <span class="kn">from</span> <span class="nn">django.db.models.lookups</span> <span class="k">import</span> <span class="n">Lookup</span>
@@ -309,24 +331,41 @@
             <span class="k">return</span> <span class="kc">None</span>
         <span class="k">return</span> <span class="n">found</span>
 
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">merge_dicts</span><span class="p">(</span><span class="n">dicts</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Merge dicts in reverse to preference the order of the original list. e.g.,</span>
+<span class="sd">        merge_dicts([a, b]) will preference the keys in &#39;a&#39; over those in &#39;b&#39;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">merged</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">dicts</span><span class="p">):</span>
+            <span class="n">merged</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">merged</span>
+
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">register_lookup</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">lookup</span><span class="p">,</span> <span class="n">lookup_name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_clear_cached_lookups</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">subclass</span> <span class="ow">in</span> <span class="n">subclasses</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+            <span class="n">subclass</span><span class="o">.</span><span class="n">get_lookups</span><span class="o">.</span><span class="n">cache_clear</span><span class="p">()</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">register_lookup</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">lookup</span><span class="p">,</span> <span class="n">lookup_name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">lookup_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">lookup_name</span> <span class="o">=</span> <span class="n">lookup</span><span class="o">.</span><span class="n">lookup_name</span>
-        <span class="k">if</span> <span class="s1">&#39;class_lookups&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">cls</span><span class="o">.</span><span class="n">__dict__</span><span class="p">:</span>
-            <span class="n">cls</span><span class="o">.</span><span class="n">class_lookups</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="n">cls</span><span class="o">.</span><span class="n">class_lookups</span><span class="p">[</span><span class="n">lookup_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">lookup</span>
+        <span class="k">if</span> <span class="s1">&#39;class_lookups&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">:</span>
+            <span class="bp">cls</span><span class="o">.</span><span class="n">class_lookups</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">class_lookups</span><span class="p">[</span><span class="n">lookup_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">lookup</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">_clear_cached_lookups</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">lookup</span>
 
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">_unregister_lookup</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">lookup</span><span class="p">,</span> <span class="n">lookup_name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_unregister_lookup</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">lookup</span><span class="p">,</span> <span class="n">lookup_name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Remove given lookup from cls lookups. For use in tests only as it&#39;s</span>
 <span class="sd">        not thread-safe.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">lookup_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">lookup_name</span> <span class="o">=</span> <span class="n">lookup</span><span class="o">.</span><span class="n">lookup_name</span>
-        <span class="k">del</span> <span class="n">cls</span><span class="o">.</span><span class="n">class_lookups</span><span class="p">[</span><span class="n">lookup_name</span><span class="p">]</span>
+        <span class="k">del</span> <span class="bp">cls</span><span class="o">.</span><span class="n">class_lookups</span><span class="p">[</span><span class="n">lookup_name</span><span class="p">]</span>
 
 
 <span class="k">def</span> <span class="nf">select_related_descend</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="n">restricted</span><span class="p">,</span> <span class="n">requested</span><span class="p">,</span> <span class="n">load_fields</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
@@ -408,6 +447,9 @@
 </pre></div>
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -438,10 +480,11 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../../../',
-            VERSION:'v0.2.1',
+            VERSION:'v0.2.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../../../../_static/jquery.js"></script>

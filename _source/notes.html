@@ -8,9 +8,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Notes &mdash; Diakonia v0.2.1 documentation</title>
+  <title>Notes &mdash; Diakonia v0.2.2 documentation</title>
   
 
+  
+  
   
   
 
@@ -33,7 +35,7 @@
         <link rel="index" title="Index"
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Diakonia v0.2.1 documentation" href="../index.html"/>
+    <link rel="top" title="Diakonia v0.2.2 documentation" href="../index.html"/>
         <link rel="next" title="Project Management" href="project_management.html"/>
         <link rel="prev" title="Transplant Pathways" href="TransplantEPR/Transplant_Pathway.html"/> 
 
@@ -44,6 +46,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -63,7 +66,7 @@
             
             
               <div class="version">
-                v0.2.1
+                v0.2.2
               </div>
             
           
@@ -84,7 +87,10 @@
           
             
             
-                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">About Diakonia</a></li>
 <li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
@@ -95,7 +101,7 @@
 <li class="toctree-l1"><a class="reference internal" href="NHIC/index.html">NHIC-TRA Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FHIRstation/index.html">FHIRstation Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PancreasDB/index.html">Pancreas DB Project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TransplantEPR/index.html">NHIC-TRA Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TransplantEPR/index.html">Transplant EPR Project</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Notes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#reqeng">ReqEng</a></li>
@@ -131,8 +137,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">Diakonia</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Diakonia</a>
+        
       </nav>
 
 
@@ -141,23 +149,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
-    <li>Notes</li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Notes</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/_source/notes.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/_source/notes.md.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -183,8 +208,8 @@
 <p>Consider shift of methodolgy as shown by the OPAL project, using Angluar JS as the Client side technology, with a Django application service backing it (and possibly a direct link to FhirBase?)</p>
 <ul class="simple">
 <li><a class="reference external" href="https://angular.io/docs/ts/latest/guide/architecture.html">https://angular.io/docs/ts/latest/guide/architecture.html</a></li>
-<li><a class="reference external" href="http://www.bluebuttonjs.com">http://www.bluebuttonjs.com</a> &#8211; BlueButton.js helps developers parse and generate complex health data formats like C-CDA with ease, so you can empower patients with access to their health records.</li>
-<li><a class="reference external" href="https://github.com/openhealthcare/opal">https://github.com/openhealthcare/opal</a> &#8211; Django+Angular OSS health system<ul>
+<li><a class="reference external" href="http://www.bluebuttonjs.com">http://www.bluebuttonjs.com</a> -- BlueButton.js helps developers parse and generate complex health data formats like C-CDA with ease, so you can empower patients with access to their health records.</li>
+<li><a class="reference external" href="https://github.com/openhealthcare/opal">https://github.com/openhealthcare/opal</a> -- Django+Angular OSS health system<ul>
 <li>With Plugins (though none for Transplant): <a class="reference external" href="http://opal.openhealthcare.org.uk/docs/guides/plugins_list/">http://opal.openhealthcare.org.uk/docs/guides/plugins_list/</a></li>
 <li>Documentation: <a class="reference external" href="http://opal.openhealthcare.org.uk/docs/">http://opal.openhealthcare.org.uk/docs/</a></li>
 </ul>
@@ -198,24 +223,24 @@
 <span id="nhs"></span><h3>NHS<a class="headerlink" href="#nhs" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>NHS HSCIC has a data dictionary, with contents online at: <a class="reference external" href="http://www.datadictionary.nhs.uk/data_dictionary/diagrams/diagrams/person_diagram_fr.asp?shownav=1">http://www.datadictionary.nhs.uk/data_dictionary/diagrams/diagrams/person_diagram_fr.asp?shownav=1</a></li>
-<li><a class="reference external" href="https://data.england.nhs.uk">https://data.england.nhs.uk</a> &#8211; Find and explore the data used by NHS England to conduct its core business</li>
-<li><a class="reference external" href="http://systems.digital.nhs.uk/ddc">http://systems.digital.nhs.uk/ddc</a> &#8211; Are behind the NHS Spine</li>
-<li><a class="reference external" href="https://code4health.org">https://code4health.org</a> &#8211; An incubator group from NHS England</li>
+<li><a class="reference external" href="https://data.england.nhs.uk">https://data.england.nhs.uk</a> -- Find and explore the data used by NHS England to conduct its core business</li>
+<li><a class="reference external" href="http://systems.digital.nhs.uk/ddc">http://systems.digital.nhs.uk/ddc</a> -- Are behind the NHS Spine</li>
+<li><a class="reference external" href="https://code4health.org">https://code4health.org</a> -- An incubator group from NHS England</li>
 <li>There are many references to strategy and ongoing work via the NHS Digital Technology pages - <a class="reference external" href="https://www.england.nhs.uk/digitaltechnology/">https://www.england.nhs.uk/digitaltechnology/</a></li>
 <li>Various data resources can be found on the TRUD (the Technology Reference data Update Distribution site) - <a class="reference external" href="https://isd.hscic.gov.uk/trud3/user/guest/group/0/home">https://isd.hscic.gov.uk/trud3/user/guest/group/0/home</a><ul>
 <li>The Interoperability Toolkit - <a class="reference external" href="https://isd.hscic.gov.uk/trud3/user/guest/group/41/pack/30">https://isd.hscic.gov.uk/trud3/user/guest/group/41/pack/30</a></li>
 </ul>
 </li>
-<li><a class="reference external" href="http://data.developer.nhs.uk/fhir/eRS/Chapter.1.About/index.html">http://data.developer.nhs.uk/fhir/eRS/Chapter.1.About/index.html</a> &#8211; FHIR Implementation Guide for the NHS e-Referral Service</li>
-<li><a class="reference external" href="http://www.oxonhealthcaretransformation.nhs.uk/who-is-involved/transformation-board-meeting-papers/transformation-board-2016-04-26/73-for-info-oxfordshire-digital-platform/file">http://www.oxonhealthcaretransformation.nhs.uk/who-is-involved/transformation-board-meeting-papers/transformation-board-2016-04-26/73-for-info-oxfordshire-digital-platform/file</a> &#8211; Oxfordshire plans from March<ul>
-<li><a class="reference external" href="http://www.oxonhealthcaretransformation.nhs.uk/who-is-involved/transformation-board-meeting-papers/">http://www.oxonhealthcaretransformation.nhs.uk/who-is-involved/transformation-board-meeting-papers/</a> &#8211; For a full index of the Transformation Board&#8217;s meetings</li>
+<li><a class="reference external" href="http://data.developer.nhs.uk/fhir/eRS/Chapter.1.About/index.html">http://data.developer.nhs.uk/fhir/eRS/Chapter.1.About/index.html</a> -- FHIR Implementation Guide for the NHS e-Referral Service</li>
+<li><a class="reference external" href="http://www.oxonhealthcaretransformation.nhs.uk/who-is-involved/transformation-board-meeting-papers/transformation-board-2016-04-26/73-for-info-oxfordshire-digital-platform/file">http://www.oxonhealthcaretransformation.nhs.uk/who-is-involved/transformation-board-meeting-papers/transformation-board-2016-04-26/73-for-info-oxfordshire-digital-platform/file</a> -- Oxfordshire plans from March<ul>
+<li><a class="reference external" href="http://www.oxonhealthcaretransformation.nhs.uk/who-is-involved/transformation-board-meeting-papers/">http://www.oxonhealthcaretransformation.nhs.uk/who-is-involved/transformation-board-meeting-papers/</a> -- For a full index of the Transformation Board's meetings</li>
 </ul>
 </li>
-<li><a class="reference external" href="http://www.ouh.nhs.uk/about/trust-board/2016/january/documents/TB2016.15-epr-plans-and-governance.pdf">http://www.ouh.nhs.uk/about/trust-board/2016/january/documents/TB2016.15-epr-plans-and-governance.pdf</a> &#8211; Trust strategy talks of a new Health Informatics Committee to be created. Need to investigate.<ul>
+<li><a class="reference external" href="http://www.ouh.nhs.uk/about/trust-board/2016/january/documents/TB2016.15-epr-plans-and-governance.pdf">http://www.ouh.nhs.uk/about/trust-board/2016/january/documents/TB2016.15-epr-plans-and-governance.pdf</a> -- Trust strategy talks of a new Health Informatics Committee to be created. Need to investigate.<ul>
 <li>Full index at <a class="reference external" href="http://www.ouh.nhs.uk/about/trust-board/meetings-and-papers.aspx">http://www.ouh.nhs.uk/about/trust-board/meetings-and-papers.aspx</a></li>
 </ul>
 </li>
-<li>South, Central, and West, Commisioning Support Unit (Andrew Fenton, previously of this trust), writing about how they are supporting Digital Health changes &#8211; <a class="reference external" href="https://www.scwcsu.nhs.uk/news/insights-issue-6-june-2016-commissioning-show-special/how-digital-health-transformation-is-taking-shape">https://www.scwcsu.nhs.uk/news/insights-issue-6-june-2016-commissioning-show-special/how-digital-health-transformation-is-taking-shape</a><ul>
+<li>South, Central, and West, Commisioning Support Unit (Andrew Fenton, previously of this trust), writing about how they are supporting Digital Health changes -- <a class="reference external" href="https://www.scwcsu.nhs.uk/news/insights-issue-6-june-2016-commissioning-show-special/how-digital-health-transformation-is-taking-shape">https://www.scwcsu.nhs.uk/news/insights-issue-6-june-2016-commissioning-show-special/how-digital-health-transformation-is-taking-shape</a><ul>
 <li><a class="reference external" href="https://www.scwcsu.nhs.uk/solutions/digital-transformation">Digital Transformation Services</a> &#64; SCW:CSU</li>
 </ul>
 </li>
@@ -227,21 +252,21 @@
 <div class="section" id="fhirbase">
 <span id="fhirbase"></span><h4>FHIRbase<a class="headerlink" href="#fhirbase" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
-<li><a class="reference external" href="http://fhirbase.github.io">http://fhirbase.github.io</a> &#8211; Docs</li>
-<li><a class="reference external" href="https://github.com/fhirbase">https://github.com/fhirbase</a> &#8211; Code repositories</li>
-<li><a class="reference external" href="https://github.com/fhirbase/fhirbase-plv8">https://github.com/fhirbase/fhirbase-plv8</a> &#8211; Repository for the Postgres Implementation</li>
-<li><a class="reference external" href="http://fhirbase.github.io/demo/index.html">http://fhirbase.github.io/demo/index.html</a> &#8211; Demo site with query window</li>
-<li><a class="reference external" href="https://groups.google.com/forum/#!forum/fhirbase">https://groups.google.com/forum/#!forum/fhirbase</a> &#8211; Google group</li>
+<li><a class="reference external" href="http://fhirbase.github.io">http://fhirbase.github.io</a> -- Docs</li>
+<li><a class="reference external" href="https://github.com/fhirbase">https://github.com/fhirbase</a> -- Code repositories</li>
+<li><a class="reference external" href="https://github.com/fhirbase/fhirbase-plv8">https://github.com/fhirbase/fhirbase-plv8</a> -- Repository for the Postgres Implementation</li>
+<li><a class="reference external" href="http://fhirbase.github.io/demo/index.html">http://fhirbase.github.io/demo/index.html</a> -- Demo site with query window</li>
+<li><a class="reference external" href="https://groups.google.com/forum/#!forum/fhirbase">https://groups.google.com/forum/#!forum/fhirbase</a> -- Google group</li>
 </ul>
 </div>
 <div class="section" id="hl7">
 <span id="hl7"></span><h4>HL7<a class="headerlink" href="#hl7" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
-<li><a class="reference external" href="http://hl7.org/implement/standards/fhir/documentation.html">http://hl7.org/implement/standards/fhir/documentation.html</a> &#8211; Fhir documentation</li>
-<li><a class="reference external" href="http://hl7.org/implement/standards/fhir/datatypes.html">http://hl7.org/implement/standards/fhir/datatypes.html</a> &#8211; Fhir datatypes</li>
-<li><a class="reference external" href="http://hl7.org/implement/standards/fhir/resourcelist.html">http://hl7.org/implement/standards/fhir/resourcelist.html</a> &#8211; Fhir resource types</li>
-<li><a class="reference external" href="http://hl7.org/implement/standards/fhir/resourceguide.html">http://hl7.org/implement/standards/fhir/resourceguide.html</a> &#8211; HL7 standards</li>
-<li><a class="reference external" href="http://hl7.org/implement/standards/fhir/implementation.html">http://hl7.org/implement/standards/fhir/implementation.html</a> &#8211; Fhir implementation checklist</li>
+<li><a class="reference external" href="http://hl7.org/implement/standards/fhir/documentation.html">http://hl7.org/implement/standards/fhir/documentation.html</a> -- Fhir documentation</li>
+<li><a class="reference external" href="http://hl7.org/implement/standards/fhir/datatypes.html">http://hl7.org/implement/standards/fhir/datatypes.html</a> -- Fhir datatypes</li>
+<li><a class="reference external" href="http://hl7.org/implement/standards/fhir/resourcelist.html">http://hl7.org/implement/standards/fhir/resourcelist.html</a> -- Fhir resource types</li>
+<li><a class="reference external" href="http://hl7.org/implement/standards/fhir/resourceguide.html">http://hl7.org/implement/standards/fhir/resourceguide.html</a> -- HL7 standards</li>
+<li><a class="reference external" href="http://hl7.org/implement/standards/fhir/implementation.html">http://hl7.org/implement/standards/fhir/implementation.html</a> -- Fhir implementation checklist</li>
 </ul>
 </div>
 <div class="section" id="slideshows">
@@ -262,8 +287,8 @@
 <li>See also the link to the NHS eRS which uses extensions</li>
 </ul>
 </li>
-<li><a class="reference external" href="http://www.hl7.org.uk/doc_store/NHS/HL7%20Integration%20Options%20for%20Trusts.pdf">Integration Options PDF</a> &#8211; HL7 talks about integration strategies, including the need for roadmaps (and steps to create)</li>
-<li><a class="reference external" href="http://www.ehealthnews.eu/emis/4679-emis-health-implements-open-standards-for-interoperability">http://www.ehealthnews.eu/emis/4679-emis-health-implements-open-standards-for-interoperability</a> &#8211; EMIS are using Fhirbase with Snomed and NHS DD</li>
+<li><a class="reference external" href="http://www.hl7.org.uk/doc_store/NHS/HL7%20Integration%20Options%20for%20Trusts.pdf">Integration Options PDF</a> -- HL7 talks about integration strategies, including the need for roadmaps (and steps to create)</li>
+<li><a class="reference external" href="http://www.ehealthnews.eu/emis/4679-emis-health-implements-open-standards-for-interoperability">http://www.ehealthnews.eu/emis/4679-emis-health-implements-open-standards-for-interoperability</a> -- EMIS are using Fhirbase with Snomed and NHS DD</li>
 <li><a class="reference external" href="https://www.renalreg.org/wp-content/uploads/2014/10/The-UK-Renal-Data-Collaboration-UKRDC-and-the-Data-Model-by-Dr-Keith-Simpson-and-Peter-Nicklin.pdf">https://www.renalreg.org/wp-content/uploads/2014/10/The-UK-Renal-Data-Collaboration-UKRDC-and-the-Data-Model-by-Dr-Keith-Simpson-and-Peter-Nicklin.pdf</a> - Project to create a UK Renal Registry that communicates with partners via FHIR<ul>
 <li><a class="reference external" href="https://www.renalreg.org/wp-content/uploads/2014/09/UK_Renal_Data_Collaboration_White_Paper_1.1.pdf">https://www.renalreg.org/wp-content/uploads/2014/09/UK_Renal_Data_Collaboration_White_Paper_1.1.pdf</a></li>
 <li><a class="reference external" href="https://www.renalreg.org/data/">https://www.renalreg.org/data/</a> - Has a UK Renal Registry Dataset definition</li>
@@ -271,7 +296,7 @@
 </li>
 <li><a class="reference external" href="http://stackoverflow.com/questions/tagged/hl7-fhir">Stackoverflow (FHIR Tag)</a> has 260 Q&amp;As so far</li>
 <li><a class="reference external" href="https://twitter.com/FHIRnews">https://twitter.com/FHIRnews</a></li>
-<li>From GNU Health, there&#8217;s a <a class="reference external" href="https://pypi.python.org/pypi/fhir">python reference library for Fhir</a></li>
+<li>From GNU Health, there's a <a class="reference external" href="https://pypi.python.org/pypi/fhir">python reference library for Fhir</a></li>
 <li>Someone is having a go at merging Django with other techs to get a Fhir stack: <a class="reference external" href="https://github.com/videntity/django-fhir">https://github.com/videntity/django-fhir</a></li>
 <li>Lots of FHIR related postings at <a class="reference external" href="https://fhirblog.com">https://fhirblog.com</a></li>
 <li>As well as at: <a class="reference external" href="https://thefhirplace.com">https://thefhirplace.com</a><ul>
@@ -312,10 +337,10 @@
 <span id="infrastructure"></span><h2>Infrastructure<a class="headerlink" href="#infrastructure" title="Permalink to this headline">¶</a></h2>
 <p>At somepoint, the reality is that developed services will need to operate somewhere. Given the low value and high cost of IM&amp;T solutions, external alternatives to consider include:</p>
 <ul class="simple">
-<li>Searching for &#8220;g cloud nhs accredited n3 hosting&#8221;:</li>
+<li>Searching for &quot;g cloud nhs accredited n3 hosting&quot;:</li>
 <li><a class="reference external" href="#">http://www.redcentricplc.com/services/infrastructure/hosting-colocation/n3-hosting/</a></li>
 <li><a class="reference external" href="#">https://www.4d-dc.com/cloud</a></li>
-<li><a class="reference external" href="#">http://ukcloud.com</a> &#8211; The new name for Skyscape<ul>
+<li><a class="reference external" href="#">http://ukcloud.com</a> -- The new name for Skyscape<ul>
 <li>Supposedly behind Genomics England hosting: <a class="reference external" href="#">http://ukcloud.com/wp-content/uploads/2016/07/UKCloud_CaseStudy_RGB_Digital_Genomics.pdf</a></li>
 <li><a class="reference external" href="#">https://www.digitalmarketplace.service.gov.uk/g-cloud/services/7456481668431278</a></li>
 <li><a class="reference external" href="#">http://ukcloud.com/what-we-do/platform-as-a-service/digital-application-platform</a></li>
@@ -331,15 +356,18 @@
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="project_management.html" class="btn btn-neutral float-right" title="Project Management" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="project_management.html" class="btn btn-neutral float-right" title="Project Management" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="TransplantEPR/Transplant_Pathway.html" class="btn btn-neutral" title="Transplant Pathways" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="TransplantEPR/Transplant_Pathway.html" class="btn btn-neutral" title="Transplant Pathways" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -370,10 +398,11 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'v0.2.1',
+            VERSION:'v0.2.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

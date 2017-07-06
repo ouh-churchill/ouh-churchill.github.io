@@ -8,9 +8,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Introduction &mdash; Diakonia v0.2.1 documentation</title>
+  <title>Introduction &mdash; Diakonia v0.2.2 documentation</title>
   
 
+  
+  
   
   
 
@@ -33,7 +35,7 @@
         <link rel="index" title="Index"
               href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="Diakonia v0.2.1 documentation" href="../../index.html"/>
+    <link rel="top" title="Diakonia v0.2.2 documentation" href="../../index.html"/>
         <link rel="up" title="NHIC-TRA Project" href="index.html"/>
         <link rel="next" title="TRA Processing" href="process.html"/>
         <link rel="prev" title="NHIC-TRA Project" href="index.html"/> 
@@ -45,6 +47,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -64,7 +67,7 @@
             
             
               <div class="version">
-                v0.2.1
+                v0.2.2
               </div>
             
           
@@ -85,7 +88,10 @@
           
             
             
-                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../introduction.html">About Diakonia</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements</a></li>
@@ -107,7 +113,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../FHIRstation/index.html">FHIRstation Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../PancreasDB/index.html">Pancreas DB Project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../TransplantEPR/index.html">NHIC-TRA Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TransplantEPR/index.html">Transplant EPR Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../project_management.html">Project Management</a></li>
 </ul>
@@ -122,8 +128,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../index.html">Diakonia</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Diakonia</a>
+        
       </nav>
 
 
@@ -132,25 +140,42 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">NHIC-TRA Project</a> &raquo;</li>
-      
-    <li>Introduction</li>
+        
+      <li>Introduction</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/_source/NHIC/introduction.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../../_sources/_source/NHIC/introduction.md.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -169,7 +194,7 @@
 <li><strong>CAN</strong> - Ovarian Cancer theme</li>
 <li><strong>HEP</strong> - Hepititis theme</li>
 <li><strong>ICU</strong> - Critical Care theme</li>
-<li><strong>GSTT</strong> - Guy&#8217;s and St Thomas Trust, one of the TRA theme partners, and theme lead</li>
+<li><strong>GSTT</strong> - Guy's and St Thomas Trust, one of the TRA theme partners, and theme lead</li>
 </ul>
 </div>
 <div class="section" id="resources">
@@ -179,9 +204,9 @@
 <li>NIHR Google Hub - a shared Google instance related to a <code class="docutils literal"><span class="pre">&#64;nihr.ac.uk</span></code> address. Not very much on there at all.</li>
 <li>Old BRC/HIC shared documents - via the Google Hub, in <code class="docutils literal"><span class="pre">Shared</span> <span class="pre">with</span> <span class="pre">me</span> <span class="pre">-&gt;</span> <span class="pre">OxBRC</span></code>. Has a fair amount of dated content. Barely updated since 2014.</li>
 <li>New BRC/HIC shared documents - also via the <a class="reference external" href="https://drive.google.com/open?id=0BxVx4JelQXE_aE9OU0VnMGVQMFk">Google Hub</a>, but this time in <code class="docutils literal"><span class="pre">My</span> <span class="pre">Drive</span> <span class="pre">-&gt;</span> <span class="pre">HIC</span> <span class="pre">Shared</span> <span class="pre">Documents</span></code>. More current documentation, but still a dearth of Transplantation information (mostly due to there being little work done on it to date)</li>
-<li>Ryan&#8217;s <a class="reference external" href="https://gitlab.com/spikeheap/nhic-tra-extract">GitLab project</a> - From his work to use Talend Open Studio to map NHS BT data to the HIC xsd specification.</li>
+<li>Ryan's <a class="reference external" href="https://gitlab.com/spikeheap/nhic-tra-extract">GitLab project</a> - From his work to use Talend Open Studio to map NHS BT data to the HIC xsd specification.</li>
 <li>The Talend files can be simplified down to just looking at the <code class="docutils literal"><span class="pre">talend_workspace/NHIC_TRA_OXFORD/process/NHSBT_to_XML_0.1.item</span></code> file, and using the <code class="docutils literal"><span class="pre">OutputTrees</span></code> element (ln1351 onwards) as the main guide.</li>
-<li>There are some data cleanup steps which can be seen as simple if functions within the code, for example replacing &#8221;.&#8221; with null in some cases.</li>
+<li>There are some data cleanup steps which can be seen as simple if functions within the code, for example replacing &quot;.&quot; with null in some cases.</li>
 <li>BRC <a class="reference external" href="https://bitbucket.org/account/user/oxfordbrcinformatics/projects/NHIC">Bitbucket repositories</a> - some more code locations for things done in the BRC</li>
 <li>More files from Ryan with a Mapping XLSX file in from an unknown source from early on in the project that translates NHSBT file into XSD headings.</li>
 </ul>
@@ -199,15 +224,18 @@
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="process.html" class="btn btn-neutral float-right" title="TRA Processing" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="process.html" class="btn btn-neutral float-right" title="TRA Processing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="NHIC-TRA Project" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="NHIC-TRA Project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -238,10 +266,11 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'v0.2.1',
+            VERSION:'v0.2.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

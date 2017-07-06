@@ -8,9 +8,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Transplant Pathways &mdash; Diakonia v0.2.1 documentation</title>
+  <title>Transplant Pathways &mdash; Diakonia v0.2.2 documentation</title>
   
 
+  
+  
   
   
 
@@ -33,8 +35,8 @@
         <link rel="index" title="Index"
               href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="Diakonia v0.2.1 documentation" href="../../index.html"/>
-        <link rel="up" title="NHIC-TRA Project" href="index.html"/>
+    <link rel="top" title="Diakonia v0.2.2 documentation" href="../../index.html"/>
+        <link rel="up" title="Transplant EPR Project" href="index.html"/>
         <link rel="next" title="Notes" href="../notes.html"/>
         <link rel="prev" title="Database Requirement Notes from IQ" href="IQ_requirements.html"/> 
 
@@ -45,6 +47,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -64,7 +67,7 @@
             
             
               <div class="version">
-                v0.2.1
+                v0.2.2
               </div>
             
           
@@ -85,7 +88,10 @@
           
             
             
-                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../introduction.html">About Diakonia</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements</a></li>
@@ -96,7 +102,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../NHIC/index.html">NHIC-TRA Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../FHIRstation/index.html">FHIRstation Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../PancreasDB/index.html">Pancreas DB Project</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">NHIC-TRA Project</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Transplant EPR Project</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="introduction.html">Transplant EPR Project</a></li>
 <li class="toctree-l2"><a class="reference internal" href="IQ_requirements.html">Database Requirement Notes from IQ</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Transplant Pathways</a><ul>
@@ -212,8 +218,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../index.html">Diakonia</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Diakonia</a>
+        
       </nav>
 
 
@@ -222,25 +230,42 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../../index.html">Docs</a> &raquo;</li>
-      
-          <li><a href="index.html">NHIC-TRA Project</a> &raquo;</li>
-      
-    <li>Transplant Pathways</li>
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Transplant EPR Project</a> &raquo;</li>
+        
+      <li>Transplant Pathways</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/_source/TransplantEPR/Transplant_Pathway.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../../_sources/_source/TransplantEPR/Transplant_Pathway.md.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -259,7 +284,7 @@
 <p>It is the goal of this endeavour to provide a system to support the patient pathway within transplantation.</p>
 <p>An orthogonal ambition is to provide high quality research data.  In the initial stages the research data will be made available in the form of a number of standardised queries, which can be parameterised.  It is anticipated that initially these queries will only produce aggregated results to maintain patient confidentiality.</p>
 <p>The aim is to allow clinicians, managers and reserchers access to information pertaining to the performance of the transplant programme and allow identification of any trends that could warrant futher action.  We will also give consideration to how additional data collection could be integrated for additional reserch purposes.  This may need additional protocols that relate to the additional processes involved in obtaining relevant consent to tpermit the collection of supplementary information.</p>
-<p>Throughout this document the term &#8216;referring clinician&#8217; will be used to cover any clinician that could refer a patient including but not limited to Nephrologists, Diabetologists and GPs.</p>
+<p>Throughout this document the term 'referring clinician' will be used to cover any clinician that could refer a patient including but not limited to Nephrologists, Diabetologists and GPs.</p>
 <div class="section" id="data-needs">
 <span id="data-needs"></span><h3>1.1  Data Needs<a class="headerlink" href="#data-needs" title="Permalink to this headline">¶</a></h3>
 <p>The data collected as a patient traverses the pathway will be used to support several functions by fulfilling the needs of various customers.  The primary uses can be classified as:  Clinical, Managerial, Madatory reporting, Evaluation and Research.  The following give a brief summary of the key data consumers and the types of data that they require.</p>
@@ -473,7 +498,7 @@ The most important this is to ensure that we capture a complete set of dat items
 <li>Reason for referral</li>
 <li>Type of transplant required</li>
 </ul>
-<p>It has been suggested that there could be an improvement in the quality of information provided at the time of referral if a proforma template was provided to referring clinicians.  This could be tailored to the type of referral.  The initial sections should contain suitable space to allow the capture of essential information.  Additional sections could ask for the information that would be &#8216;nice to have&#8217;.</p>
+<p>It has been suggested that there could be an improvement in the quality of information provided at the time of referral if a proforma template was provided to referring clinicians.  This could be tailored to the type of referral.  The initial sections should contain suitable space to allow the capture of essential information.  Additional sections could ask for the information that would be 'nice to have'.</p>
 </div>
 </div>
 <div class="section" id="queries-required">
@@ -549,7 +574,7 @@ The most important this is to ensure that we capture a complete set of dat items
 </ul>
 <p>All of the data collected is used to make an assessment of the suitability of the patient for transplant.  Additional tests can be ordered at different times.  The results of tests take variable amounts of time to become available.  It is therefore essential that any system notifies an appropriate person when all of the data becomes available, or if a particular timeout has been exceeded.</p>
 <p>During the assessment phase, and subsequent phases, it is necessary to get positive confirmation from the patient of the current medication as any information recorded in the system may be out of date.</p>
-<p>It is also desireable to obtain positivie confirmatio of allergies at the same time.  Blood tests may be done on the day of the assessment or at subsequent appointments possibly at the patient&#8217;s local centre.  It is unlikely that these results will be available immediately.  Currently tests for out patients are ordered on paper but this should become electronic ordering as the EPR rollout continues.</p>
+<p>It is also desireable to obtain positivie confirmatio of allergies at the same time.  Blood tests may be done on the day of the assessment or at subsequent appointments possibly at the patient's local centre.  It is unlikely that these results will be available immediately.  Currently tests for out patients are ordered on paper but this should become electronic ordering as the EPR rollout continues.</p>
 <p>In addition to the completion of the assessment form the patient is asked to sign several consent forms:</p>
 <ul class="simple">
 <li>DPA related to permit the sending of information to NHSBT</li>
@@ -560,7 +585,7 @@ The most important this is to ensure that we capture a complete set of dat items
 <p>The consent forms are currently filled in by hand, with some of the information duplicated on each of the forms.  One of the forms goes to NHSBT the others are stored locally.  It is possible for forms to be mislayed.  A method of reducing the duplication of information would be beneficial.  It would also be beneficial to have an electronic version of the consent forms associated with the patient record.</p>
 <p>It is also necessary to take account of potential exceptions to the usual progress through the transplant pathway.  For instance special measures may need to be taken to prevent discrimination against patients from particular groups or suffering from particular ailments, such as:</p>
 <ul class="simple">
-<li>Jehovah&#8217;s Witnesses</li>
+<li>Jehovah's Witnesses</li>
 <li>Allergies</li>
 <li>Other issues</li>
 </ul>
@@ -727,7 +752,7 @@ The H&amp;I lab system will contain additional information not available in EPR.
 <li>DoB</li>
 <li>Department/Ward</li>
 <li>Consultant</li>
-<li>Clinician&#8217;s name</li>
+<li>Clinician's name</li>
 <li>Signature</li>
 <li>Photographs details</li>
 <li>Taken by</li>
@@ -1203,7 +1228,7 @@ SUG:  Template for operation data entry.</p>
 </div>
 <div class="section" id="outputs">
 <span id="id27"></span><h3>13.3 Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h3>
-<p>A discharge summary letter that is sent to the patient&#8217;s GP. (Does this also go to the referring clinician?)</p>
+<p>A discharge summary letter that is sent to the patient's GP. (Does this also go to the referring clinician?)</p>
 </div>
 </div>
 <div class="section" id="follow-up">
@@ -1271,7 +1296,7 @@ SUG:  Template for operation data entry.</p>
 </div>
 <div class="section" id="epr-notes">
 <span id="epr-notes"></span><h2>18 EPR Notes<a class="headerlink" href="#epr-notes" title="Permalink to this headline">¶</a></h2>
-<p>It is possible to add adhoc attachments to a patient record in EPR.  This is done by creating a digital version of the item to be added and placing it in an appropriate place.  The item is &#8216;scanned&#8217; in some way and is usueally placed in a directory on the K drive.  From there it is possible to attach the item to a &#8216;Note&#8217;.  This will allos the viewing of each item added to the patient record.</p>
+<p>It is possible to add adhoc attachments to a patient record in EPR.  This is done by creating a digital version of the item to be added and placing it in an appropriate place.  The item is 'scanned' in some way and is usueally placed in a directory on the K drive.  From there it is possible to attach the item to a 'Note'.  This will allos the viewing of each item added to the patient record.</p>
 <p>Dashboards can be added to the EPR, with complex pathway rules to allow a quick visual check as to the state of the required tasks related to the tests and other items necessary for completion before the patient moves to the next phase of the pathway.</p>
 <p>It is also possible to capture paper forms including those with the diagrams, in the EPR.  This would allow the capturing of information in a consistent way and permit the instant sharing with multiple interested parties.</p>
 </div>
@@ -1291,15 +1316,18 @@ SUG:  Template for operation data entry.</p>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../notes.html" class="btn btn-neutral float-right" title="Notes" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../notes.html" class="btn btn-neutral float-right" title="Notes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="IQ_requirements.html" class="btn btn-neutral" title="Database Requirement Notes from IQ" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="IQ_requirements.html" class="btn btn-neutral" title="Database Requirement Notes from IQ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1330,10 +1358,11 @@ SUG:  Template for operation data entry.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'v0.2.1',
+            VERSION:'v0.2.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>
