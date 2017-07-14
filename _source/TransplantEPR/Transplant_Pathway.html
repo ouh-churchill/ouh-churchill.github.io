@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Transplant Pathways &mdash; Diakonia v0.2.2 documentation</title>
+  <title>Transplant Pathways &mdash; Diakonia v0.2.3 documentation</title>
   
 
   
@@ -35,7 +35,7 @@
         <link rel="index" title="Index"
               href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="Diakonia v0.2.2 documentation" href="../../index.html"/>
+    <link rel="top" title="Diakonia v0.2.3 documentation" href="../../index.html"/>
         <link rel="up" title="Transplant EPR Project" href="index.html"/>
         <link rel="next" title="Notes" href="../notes.html"/>
         <link rel="prev" title="Database Requirement Notes from IQ" href="IQ_requirements.html"/> 
@@ -67,7 +67,7 @@
             
             
               <div class="version">
-                v0.2.2
+                v0.2.3
               </div>
             
           
@@ -139,7 +139,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#outpatient-appointment">7 Outpatient appointment</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#assessment-process">7.1 Assessment process</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#inputs">7.2 Inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#actor-involved">7.3 Actor involved</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#actors-involved">7.3 Actors involved</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#processes-involved">7.4 Processes involved</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#information-generated-and-stored">7.5 Information generated and stored</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#general-data">7.6 General data</a></li>
@@ -568,11 +568,12 @@
 <div class="section" id="outpatient-appointment">
 <span id="outpatient-appointment"></span><h2>7 Outpatient appointment<a class="headerlink" href="#outpatient-appointment" title="Permalink to this headline">¶</a></h2>
 <p>The outpatient appointment is the initial contact with the patient. During this appointment a transplant assessment form is completed alongside other tests to gather the necessary information to permit a decision to be made about suitability for transplant. The patient arrives for assessment and the demographic information already in the system is validated. If tests have been performed previously then some of the information required might already be available.</p>
-<p>Insert Figure 4</p>
+<p><img alt="Figure 4: Outpatient Stage" src="../../_images/transplant_pathways_diagrams_figure_4.svg" /></p>
 <div class="section" id="assessment-process">
 <span id="assessment-process"></span><h3>7.1 Assessment process<a class="headerlink" href="#assessment-process" title="Permalink to this headline">¶</a></h3>
-<p>The first appointment should occur within 6 weeks of receiving the referral. At the outpatient appointment a consultant and nurse perform a transplant assessment using a standard form. This form is designed to capture the information necessary to enable a listing meeting to make an appropriate decision. This form does include diagrams that are annotated when the clinical examination is conducted.</p>
-<p>It would be beneficial to have an electronic version of the form that recorded the information directly into a suitable information system. In addition an anaesthetic assessment section shoudl be completed as part of the outpatient appointment. This should be forwarded to the anaesthetist in advance to enable them to request additional tests if that is appropriate.</p>
+<p>The first appointment should occur within 6 weeks of receiving the referral. At the outpatient appointment a Consultant and Nurse perform a Transplant Assessment using a standard form. This form is designed to capture the information necessary to enable a listing meeting to make an appropriate decision. This form does include diagrams that are annotated when the clinical examination is conducted.</p>
+<p>It would be beneficial to have an electronic version of the form that recorded the information directly into a suitable information system.</p>
+<p>In addition an anaesthetic assessment section should be completed as part of the outpatient appointment. This should be forwarded to the anaesthetist in advance to enable them to request additional tests if that is appropriate.</p>
 <p>The assessment usually include:</p>
 <ul class="simple">
 <li>Blood tests, with the results being available from the EPR</li>
@@ -585,25 +586,27 @@
 <li>Chest - CXR, PFTs, CPEX</li>
 <li>Cardiology - heart MPS, coronary angio stent cardiac surgery</li>
 <li>Myocardial perfusion scans</li>
-<li>Other - dopplers, duplex, CT</li>
+<li>Other - canoud? dopplers, duplex, CT</li>
 </ul>
-<p>In addition input may be required from</p>
+<p>In addition input may be required from:</p>
 <ul class="simple">
 <li>Pharmacist</li>
 <li>Dietician</li>
 <li>Psychologist</li>
 </ul>
 <p>All of the data collected is used to make an assessment of the suitability of the patient for transplant. Additional tests can be ordered at different times. The results of tests take variable amounts of time to become available. It is therefore essential that any system notifies an appropriate person when all of the data becomes available, or if a particular timeout has been exceeded.</p>
-<p>During the assessment phase, and subsequent phases, it is necessary to get positive confirmation from the patient of the current medication as any information recorded in the system may be out of date.</p>
-<p>It is also desireable to obtain positivie confirmatio of allergies at the same time. Blood tests may be done on the day of the assessment or at subsequent appointments possibly at the patient's local centre. It is unlikely that these results will be available immediately. Currently tests for out patients are ordered on paper but this should become electronic ordering as the EPR rollout continues.</p>
+<p>During the assessment phase, and subsequent phases, it is necessary to get positive confirmation from the patient of the current medication, as any information recorded in the system may be out of date.</p>
+<p>It is also desirable to obtain positive confirmation of allergies at the same time.</p>
+<p>Blood tests may be done on the day of the assessment or at subsequent appointments possibly at the patient's local centre. It is unlikely that these results will be available immediately. Currently tests for out patients are ordered on paper but this should become electronic ordering as the EPR rollout continues.</p>
 <p>In addition to the completion of the assessment form the patient is asked to sign several consent forms:</p>
 <ul class="simple">
 <li>DPA related to permit the sending of information to NHSBT</li>
 <li>Consent for virology test - in particular HIV</li>
-<li>Consent for a photograph to be taken and added to work up documents</li>
+<li>Consent for a photograph to be taken and added to work-up documents</li>
 <li>Consent to go on the waiting list (is this currently done?)</li>
 </ul>
-<p>The consent forms are currently filled in by hand, with some of the information duplicated on each of the forms. One of the forms goes to NHSBT the others are stored locally. It is possible for forms to be mislayed. A method of reducing the duplication of information would be beneficial. It would also be beneficial to have an electronic version of the consent forms associated with the patient record.</p>
+<p>The consent forms are currently filled in by hand, with some of the information duplicated on each of the forms. One of the forms goes to NHSBT the others are stored locally. It is possible for forms to be mislaid. A method of reducing the duplication of information would be beneficial.</p>
+<p>It would also be beneficial to have an electronic version of the consent forms associated with the patient record.</p>
 <p>It is also necessary to take account of potential exceptions to the usual progress through the transplant pathway. For instance special measures may need to be taken to prevent discrimination against patients from particular groups or suffering from particular ailments, such as:</p>
 <ul class="simple">
 <li>Jehovah's Witnesses</li>
@@ -616,13 +619,13 @@
 <p>For an outpatient appointment to occur several things need to be in place:</p>
 <ul class="simple">
 <li>A record of the patient on the system that needs to be verified</li>
-<li>The patients needs to attend</li>
-<li>The patient needs to bring any additional informatio requested at the time the appointment was sent out.</li>
+<li>The patient needs to attend</li>
+<li>The patient needs to bring any additional information requested at the time the appointment was sent out.</li>
 </ul>
 <p>However, the primary input to the outpatient appointment is the referral letter and any associated patient history it includes. It is therefore imperative that the referral letter is available either physically or electronically.</p>
 </div>
-<div class="section" id="actor-involved">
-<span id="actor-involved"></span><h3>7.3 Actor involved<a class="headerlink" href="#actor-involved" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="actors-involved">
+<span id="id2"></span><h3>7.3 Actors involved<a class="headerlink" href="#actors-involved" title="Permalink to this headline">¶</a></h3>
 <p>The following are normally involved in the outpatient appointment stage:</p>
 <ul class="simple">
 <li>Patient</li>
@@ -644,93 +647,115 @@
 </ul>
 </div>
 <div class="section" id="processes-involved">
-<span id="id2"></span><h3>7.4 Processes involved<a class="headerlink" href="#processes-involved" title="Permalink to this headline">¶</a></h3>
-<p>Each of the individual tests orgered could be considered a sub-process. They wil leach have their own SOPs that govern how the patient is evaluated and the results returned.</p>
+<span id="id3"></span><h3>7.4 Processes involved<a class="headerlink" href="#processes-involved" title="Permalink to this headline">¶</a></h3>
+<p>Each of the individual tests ordered could be considered a sub-process. They will each have their own SOPs that govern how the patient is evaluated and the results returned.</p>
 </div>
 <div class="section" id="information-generated-and-stored">
-<span id="id3"></span><h3>7.5 Information generated and stored<a class="headerlink" href="#information-generated-and-stored" title="Permalink to this headline">¶</a></h3>
-<p>The data is potentially captured in a number of ways:
-EPR will capture demographic data as well as that pertaining to lab results.
-PACS will contain radiographic information
-The H&amp;I lab system will contain additional information not available in EPR.</p>
-<p>ECG information is captured potentially this is only in paper format at the moment.</p>
-<p>proton currently captures any information related to the pharmacist although this is likely to change in the near future as teh ePrescribing module of the EPR is rolled out.</p>
-<p>In addition there is a form to be filled in during the assessment process. This is currently a paper form. This could be transplated into a form on EPR to allow the electronic capture of data.</p>
+<span id="id4"></span><h3>7.5 Information generated and stored<a class="headerlink" href="#information-generated-and-stored" title="Permalink to this headline">¶</a></h3>
+<p>The data is potentially captured in a number of ways:</p>
+<ul class="simple">
+<li>EPR will capture demographic data as well as that pertaining to lab results</li>
+<li>PACS will contain radiographic information</li>
+<li>The H&amp;I lab system will contain additional information not available in EPR</li>
+<li>ECG information is captured, though potentially this is only in paper format</li>
+<li>Proton currently captures any information related to the pharmacist although this is likely to change in the near future as the ePrescribing module of the EPR is rolled out</li>
+</ul>
+<p>In addition there is a form to be filled in during the assessment process. This is currently a paper form. This could be translated into a form on EPR to allow the electronic capture of data.</p>
 </div>
 <div class="section" id="general-data">
 <span id="general-data"></span><h3>7.6 General data<a class="headerlink" href="#general-data" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Demographics</li>
+<li>Demographics<ul>
 <li>NHS number</li>
-<li>Hospital number</li>
+<li>Hospital number (MRN)</li>
 <li>Name</li>
 <li>DoB</li>
 <li>Address</li>
 <li>Contact numbers</li>
 <li>Age</li>
 <li>Gender</li>
-<li>Ethinicity</li>
+<li>Ethnicity</li>
 <li>Employment</li>
 <li>NOK</li>
 <li>GP details</li>
-<li>Referral details</li>
+</ul>
+</li>
+<li>Referral details<ul>
 <li>Date</li>
 <li>Clinic</li>
 <li>Tx Surgeon</li>
 <li>Tx Coordinator</li>
 <li>Local coordinator</li>
-<li>Organs required</li>
+<li>Organ(s) required</li>
 <li>Clock start</li>
 <li>Clock stop</li>
 <li>Reason</li>
-<li>Ref consultant</li>
+<li>Referring consultant</li>
 <li>Contact details</li>
 <li>Dialysis unit</li>
-<li>Transport plan</li>
+</ul>
+</li>
+<li>Transport plan<ul>
 <li>Own transport</li>
 <li>Hospital transport</li>
 <li>Plan</li>
 <li>Pre-authorisation code</li>
-<li>Back up</li>
-<li>Is there a LD Kidney option</li>
-<li>Clinical basics</li>
+<li>Backup?</li>
+</ul>
+</li>
+<li>Is there a LD Kidney option?</li>
+<li>Clinical basics<ul>
 <li>Height</li>
-<li>Weight</li>
+<li>Weight<ul>
 <li>BMI</li>
+</ul>
+</li>
 <li>Hip/waist ratio</li>
 <li>BP</li>
 <li>Pulse</li>
 <li>SF-36 Questionnaire</li>
 <li>Hypoglycaemia questionnaire</li>
+</ul>
+</li>
 <li>Renal History (diabetic)</li>
 <li>Past medical history</li>
 <li>Past surgical history</li>
 <li>Drug history</li>
 <li>Anaesthetic assessment</li>
 <li>Social history</li>
-<li>Check list</li>
+<li>Check list<ul>
 <li>PAP smear date</li>
 <li>Mammogram date</li>
 <li>Pregnancies</li>
-<li>Blood transfusions</li>
+<li>Blood transfusions<ul>
 <li>Date</li>
+</ul>
+</li>
 <li>VZV immunity</li>
 <li>Female less than 55 years and Rh neg?</li>
-<li>Clinical Examination</li>
+</ul>
+</li>
+<li>Clinical Examination<ul>
 <li>Diagrams to complete</li>
+</ul>
+</li>
 <li>Plan and investigations required</li>
 <li>Date</li>
 <li>Assessing surgeon</li>
 <li>Assessing coordinator</li>
-<li>Cardiac investigation outcomes</li>
+<li>Cardiac investigation outcomes<ul>
 <li>Type of scan</li>
 <li>Date</li>
 <li>Centre</li>
 <li>Report Details</li>
-<li>Cardiology MDT Summary</li>
+</ul>
+</li>
+<li>Cardiology MDT Summary<ul>
 <li>Date</li>
 <li>Present</li>
 <li>Summary</li>
+</ul>
+</li>
 <li>Blood test results</li>
 <li>Urine test results</li>
 <li>H&amp;I lab results</li>
@@ -752,12 +777,16 @@ The H&amp;I lab system will contain additional information not available in EPR.
 <li>Syphillis</li>
 <li>Toxoplasmosis</li>
 <li>Herpes Simplex</li>
-<li>Name</li>
+<li>Name<ul>
 <li>Signature</li>
 <li>Date</li>
-<li>Coordinator name</li>
+</ul>
+</li>
+<li>Coordinator name<ul>
 <li>Signature</li>
 <li>Date</li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="section" id="clinical-photography">
@@ -769,15 +798,19 @@ The H&amp;I lab system will contain additional information not available in EPR.
 <li>DoB</li>
 <li>Department/Ward</li>
 <li>Consultant</li>
-<li>Clinician's name</li>
+<li>Clinician's name<ul>
 <li>Signature</li>
-<li>Photographs details</li>
+</ul>
+</li>
+<li>Photographs details<ul>
 <li>Taken by</li>
 <li>Badge number</li>
 <li>Job title</li>
 <li>Location of photography</li>
 <li>Date</li>
 <li>Location of stored image files</li>
+</ul>
+</li>
 </ul>
 <p>Consent level 1</p>
 <ul class="simple">
@@ -802,11 +835,15 @@ The H&amp;I lab system will contain additional information not available in EPR.
 <span id="recipient-consent-form"></span><h4>7.7.3 Recipient consent form<a class="headerlink" href="#recipient-consent-form" title="Permalink to this headline">¶</a></h4>
 <p>Consent</p>
 <ul class="simple">
-<li>Understand voluntary consent for data use by NHSBT</li>
+<li>Understand voluntary consent for data use by NHSBT<ul>
 <li>Initial</li>
-<li>All data shared as necessary</li>
+</ul>
+</li>
+<li>All data shared as necessary<ul>
 <li>Initial</li>
-<li>Signature of paient</li>
+</ul>
+</li>
+<li>Signature of patient</li>
 <li>Date</li>
 <li>Witness signature</li>
 <li>Date</li>
@@ -816,20 +853,32 @@ The H&amp;I lab system will contain additional information not available in EPR.
 </ul>
 <p>Refusal of consent</p>
 <ul class="simple">
-<li>Understan refusal may jeopardise chances</li>
+<li>Understand refusal may jeopardise chances<ul>
 <li>Initial</li>
-<li>Refuse consent for certain items</li>
+</ul>
+</li>
+<li>Refuse consent for certain items<ul>
 <li>Initial</li>
 <li>Specify items</li>
-<li>Refuse consent for all information</li>
-<li>Initia</li>
-<li>Signature of patient</li>
+</ul>
+</li>
+<li>Refuse consent for all information<ul>
+<li>Initial</li>
+</ul>
+</li>
+<li>Signature of patient<ul>
 <li>Date</li>
-<li>Witness signature</li>
+</ul>
+</li>
+<li>Witness signature<ul>
 <li>Date</li>
-<li>Representative signature</li>
+</ul>
+</li>
+<li>Representative signature<ul>
 <li>Date</li>
 <li>Name of representative</li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="section" id="outpatient-outcome-form">
@@ -837,22 +886,26 @@ The H&amp;I lab system will contain additional information not available in EPR.
 <ul class="simple">
 <li>Consultant</li>
 <li>Clinic prep</li>
-<li>Reception</li>
+<li>Reception<ul>
 <li>Patient type (NHS/Private/Overseas)</li>
-<li>Clinical staff</li>
+</ul>
+</li>
+<li>Clinical staff<ul>
 <li>Patient on 18 week pathway</li>
+</ul>
+</li>
 <li>Outcome of attendance</li>
 </ul>
 </div>
 </div>
 <div class="section" id="outputs">
-<span id="id4"></span><h3>7.8 Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h3>
+<span id="id5"></span><h3>7.8 Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h3>
 <p>The potential results of the OPA are:</p>
 <ul class="simple">
-<li>The patient is put forward to a listing meeting (considered an appropriate candidate).</li>
-<li>The patient is not considered to be a suitable candidate and a refusal is granted.</li>
+<li>The patient is put forward to a listing meeting (considered an appropriate candidate)</li>
+<li>The patient is not considered to be a suitable candidate and a refusal is granted</li>
 </ul>
-<p>The ultimate output from this section is a letter, wither indicating that the patietn is being forwrded to the listing meeting or that they are un unsuitable candidate for transplantation.</p>
+<p>The ultimate output from this section is a letter, wither indicating that the patient is being forwarded to the listing meeting or that they are an unsuitable candidate for transplantation.</p>
 <p>Letters are usually generated using the ALDEN system.</p>
 <ul class="simple">
 <li>The letter is dictated or typed</li>
@@ -866,28 +919,31 @@ The H&amp;I lab system will contain additional information not available in EPR.
 <span id="notes"></span><h3>7.9 Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h3>
 <p>Some procedures exit in various states.</p>
 <ul class="simple">
-<li>Transplant immunology - SOPs</li>
+<li>Transplant immunology -&gt; SOPs</li>
 <li>Protocols on intranet for all transplant programmes reviewed</li>
-<li>Renal</li>
+<li>Renal<ul>
 <li>Transplant intranet</li>
 <li>link to other OUH documents</li>
+</ul>
+</li>
 <li>Renal transplant RTC SOP (Renal directorate server)</li>
 </ul>
-<p>It is not clear if the EPR system captures all of the information required for the assessmetn. If the EPR system does not collect all of the necessary information it is probable that an additional system will need to be developed that will operate in conjunction with the EPR system.</p>
-<p>SUG: A system should allow the storage of the letter as part of teh overall patietn record. In addition it should also form part of the patietns timeline. Note: Apparently this is being incorporated into the EPR system.</p>
-<p>SUG: A template for a letter could be provided that is automatically populated with the relevant test result and other asessment findings. The surgeon could then add any customisations that were appropriate for the individual patient.</p>
+<p>It is not clear if the EPR system captures all of the information required for the assessment. If the EPR system does not collect all of the necessary information it is probable that an additional system will need to be developed that will operate in conjunction with the EPR system.</p>
+<p><strong>SUG:</strong> A system should allow the storage of the letter as part of the overall patient record. In addition it should also form part of the patient's timeline. Note: Apparently this is being incorporated into the EPR system.</p>
+<p><strong>SUG:</strong> A template for a letter could be provided that is automatically populated with the relevant test result and other assessment findings. The surgeon could then add any customisations that were appropriate for the individual patient.</p>
 <p>Note: Islet and bowel cases do not always fit into the 18 week time frame as the assessments can be complex.</p>
 </div>
 </div>
 <div class="section" id="listing-meeting">
 <span id="listing-meeting"></span><h2>8 Listing Meeting<a class="headerlink" href="#listing-meeting" title="Permalink to this headline">¶</a></h2>
-<p>The final decision about the suitability of a candidate patietn for transplant is made at the listing meeting. The outcome of the meeting dictates the next stage for the patient in the pathway.</p>
-<p>The meeting is a multi-professional meeting.</p>
-<p>SUG: It is importanat to identify any items of information that should be circulated to all attendees prior to the meeting being convened. For each item of information that is required the format and acceptable content should be defined. It is easier to circulate information if it is in an electronic form.</p>
+<p>The final decision about the suitability of a candidate patient for transplant is made at the listing meeting. The outcome of the meeting dictates the next stage for the patient in the pathway.</p>
+<p>The meeting is a multi-profession meeting.</p>
+<p><strong>SUG:</strong> It is important to identify any items of information that should be circulated to all attendees prior to the meeting being convened. For each item of information that is required the format and acceptable content should be defined. It is easier to circulate information if it is in an electronic form.</p>
+<p><img alt="Figure 5: Listing Meeting" src="../../_images/transplant_pathways_diagrams_figure_5.svg" /></p>
 <div class="section" id="inputs">
-<span id="id5"></span><h3>8.1 Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h3>
-<p>The inputs to this process are the outputs of the outpatient appointment phase and teh initial referral letter. This includes the letter detailing the recommendation as the result of a cardiology MDT meeting, test results and any other information available at the time of the meeting.</p>
-<p>The gereral information to complete the NHSBT form is currently obtained from several sources including:</p>
+<span id="id6"></span><h3>8.1 Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h3>
+<p>The inputs to this process are the outputs of the outpatient appointment phase and the initial referral letter. This includes the letter detailing the recommendation as the result of a cardiology MDT meeting, test results, and any other information available at the time of the meeting.</p>
+<p>The general information to complete the NHSBT form is currently obtained from several sources including:</p>
 <ul class="simple">
 <li>Word documents containing patient demographics</li>
 <li>Lab reports from EPR</li>
@@ -899,12 +955,12 @@ The H&amp;I lab system will contain additional information not available in EPR.
 <p>Also recorded:</p>
 <ul class="simple">
 <li>Height</li>
-<li>Weight - BMI</li>
+<li>Weight -&gt; BMI</li>
 <li>QoL and hypoglycaemia awareness from a paper questionnaire and clinical assessment - only in word document</li>
 </ul>
 </div>
 <div class="section" id="actors-involved">
-<span id="id6"></span><h3>8.2 Actors involved<a class="headerlink" href="#actors-involved" title="Permalink to this headline">¶</a></h3>
+<span id="id7"></span><h3>8.2 Actors involved<a class="headerlink" href="#actors-involved" title="Permalink to this headline">¶</a></h3>
 <p>The following are usually involved in the listing meeting</p>
 <ul class="simple">
 <li>Nephrologist</li>
@@ -916,24 +972,27 @@ The H&amp;I lab system will contain additional information not available in EPR.
 </div>
 <div class="section" id="procedure">
 <span id="procedure"></span><h3>8.3 Procedure<a class="headerlink" href="#procedure" title="Permalink to this headline">¶</a></h3>
-<p>There should be a record of who attended the meeting. There should be a brief record of discussions that occurred. This should be attached to the patients timeline. A record of the consensus view should be kept along with any reservations raised. Ther should be a record of the reasons for declining a patient.</p>
-<p>If the patient is deemed suitable for listing then the NHSBT pre registration data needs to be collected and the following done:</p>
+<p>There should be a record of who attended the meeting. There should be a brief record of discussions that occurred, and this should be attached to the patient's timeline. A record of the consensus view should be kept along with any reservations raised. There should be a record of the reasons for declining a patient.</p>
+<p>If the patient is deemed suitable for listing then the NHSBT pre-registration data needs to be collected and the following done:</p>
 <ul class="simple">
-<li>Complete the form so the patient is registerd with NHSBT</li>
+<li>Complete the form so the patient is registered with NHSBT</li>
 <li>Send the form to the H&amp;I lab for tissue type information to be added prior to being sent off</li>
-<li>Paper form is faxed to NHSBT at the time of registration</li>
 </ul>
-<p>We are currently focusing on the requirements for renal transplant but it is worth noting that ther are some differences between each programme as to the criteria to go on the waiting list.</p>
+<p>Paper form is faxed to NHSBT at the time of registration</p>
+<p>We are currently focusing on the requirements for renal transplant but it is worth noting that there are some differences between each programme as to the criteria to go on the waiting list.</p>
 </div>
 <div class="section" id="information-generated-and-stored">
-<span id="id7"></span><h3>8.4 Information generated and stored<a class="headerlink" href="#information-generated-and-stored" title="Permalink to this headline">¶</a></h3>
+<span id="id8"></span><h3>8.4 Information generated and stored<a class="headerlink" href="#information-generated-and-stored" title="Permalink to this headline">¶</a></h3>
 <p>The following data artefacts should be generated by the listing meeting:</p>
 <ul class="simple">
-<li>Listing MDT Summary and Transplant Plan</li>
+<li>Listing MDT Summary and Transplant Plan<ul>
 <li>Date</li>
 <li>Present</li>
 <li>Issues Discussed/concerns raised</li>
+<li>Outcomes/Actions</li>
 <li>Consultant Sign off</li>
+</ul>
+</li>
 <li>Letter to patient</li>
 <li>Letter to GP/referring clinician</li>
 <li>NHSBT form</li>
@@ -945,16 +1004,16 @@ The H&amp;I lab system will contain additional information not available in EPR.
 </ul>
 </div>
 <div class="section" id="outputs">
-<span id="id8"></span><h3>8.5 Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h3>
-<p>The utimate output of the meeting is a letter to the patient and GP (?) indicating whether or not the patient has been accepted onto the waiting list. In addition if the patient is recommended for listing then the appropriate NHSBT forms should be completed and sent off.</p>
+<span id="id9"></span><h3>8.5 Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h3>
+<p>The ultimate output of the meeting is a letter to the patient and GP (?) indicating whether or not the patient has been accepted onto the waiting list. In addition, if the patient is recommended for listing then the appropriate NHSBT forms should be completed and sent off.</p>
 </div>
 <div class="section" id="notes">
-<span id="id9"></span><h3>8.6 Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h3>
-<p>SUG: Automated letter production</p>
-<p>A standard letter template should be created appropriate to each specialty. The letter should be automatically populated with any information available from the system (EPR) along with entered information. Information entered should be via a template captured via an input form appropriate to the specialty. A combination of dropdowns and text areas should be used to permit the entry of information that completes standardised prose. Enterd information should also be stored to facilitate searching for items of interst at a later point in time.</p>
+<span id="id10"></span><h3>8.6 Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h3>
+<p><strong>SUG:</strong> Automated letter production</p>
+<p>A standard letter template <em>should</em> be created appropriate to each specialty. The letter should be automatically populated with any information available from the system (EPR) along with entered information. Information entered should be via a template captured via an input form appropriate to the specialty. A combination of dropdowns and text areas should be used to permit the entry of information that completes standardised prose. Entered information should also be stored to facilitate searching for items of interest at a later point in time.</p>
 <p>The letter will either be requesting the addition of the patient to a waiting list or the refusal of the patient.</p>
-<p>If the outcome is positive teh letter request the activiation of the patietn on the waiting list. This letter is sent to the H&amp;I lab. It is necessary for this letter to be signed before the H&amp;I lab forward teh form to NHSBT.</p>
-<p>QUE: Could this letter be in an electronic format and be signed with a digital signature?</p>
+<p>If the outcome is positive, the letter requests the activation of the patient on the waiting list. This letter is sent to the H&amp;I lab. It is necessary for this letter to be signed before the H&amp;I lab forward the form to NHSBT.</p>
+<p><strong>QUE:</strong> Could this letter be in an electronic format and be signed with a digital signature?</p>
 </div>
 </div>
 <div class="section" id="waiting-list">
@@ -967,15 +1026,15 @@ The H&amp;I lab system will contain additional information not available in EPR.
 </ul>
 <p>Insert Figure 8</p>
 <div class="section" id="inputs">
-<span id="id10"></span><h3>9.1 Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h3>
+<span id="id11"></span><h3>9.1 Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h3>
 <p>The inputs to this stage of teh pathway are teh decision of teh listing meeting along with the information collected to this point. Additional inputs can take the form of communications relating to the patietn. These communications can take many forms such as telephone calls, emails and letters.</p>
 </div>
 <div class="section" id="queries-required">
-<span id="id11"></span><h3>9.2 Queries required<a class="headerlink" href="#queries-required" title="Permalink to this headline">¶</a></h3>
+<span id="id12"></span><h3>9.2 Queries required<a class="headerlink" href="#queries-required" title="Permalink to this headline">¶</a></h3>
 <p>Reports: Currently information has to gathered from multipjjle sources to e able to generate results and reports. Some of these reports form the basis of submissions to relevant external bodies. It could be useful to generate perioadic reports that give up to date figures relating to the activity of the department as well as the status of patients. This would allow closer monitoring of the number of patients on the waiting list and the proportion of patiens in each potential waiting list state.</p>
 </div>
 <div class="section" id="actors-involved">
-<span id="id12"></span><h3>9.3 Actors involved<a class="headerlink" href="#actors-involved" title="Permalink to this headline">¶</a></h3>
+<span id="id13"></span><h3>9.3 Actors involved<a class="headerlink" href="#actors-involved" title="Permalink to this headline">¶</a></h3>
 <p>The following are the primary participants at this stage:</p>
 <ul class="simple">
 <li>Patients</li>
@@ -984,7 +1043,7 @@ The H&amp;I lab system will contain additional information not available in EPR.
 <p>In addition there will be periodic input from clinical specialists as required.</p>
 </div>
 <div class="section" id="processes-involved">
-<span id="id13"></span><h3>9.4 Processes involved<a class="headerlink" href="#processes-involved" title="Permalink to this headline">¶</a></h3>
+<span id="id14"></span><h3>9.4 Processes involved<a class="headerlink" href="#processes-involved" title="Permalink to this headline">¶</a></h3>
 <p>While on the waiting list each patient can be in one of several states:</p>
 <ul class="simple">
 <li>Can be an active work up patient</li>
@@ -1002,7 +1061,7 @@ The H&amp;I lab system will contain additional information not available in EPR.
 <p>If the tests are to be carried out an another centre the system should flag when a tes being carried out remotely has not been reported within a predefined period of time.</p>
 </div>
 <div class="section" id="information-generated-and-stored">
-<span id="id14"></span><h3>9.5 Information generated and stored<a class="headerlink" href="#information-generated-and-stored" title="Permalink to this headline">¶</a></h3>
+<span id="id15"></span><h3>9.5 Information generated and stored<a class="headerlink" href="#information-generated-and-stored" title="Permalink to this headline">¶</a></h3>
 <p>Data locations:</p>
 <ul class="simple">
 <li>MedCon - Cardiologist information</li>
@@ -1051,7 +1110,7 @@ QUE: What would the granularity of access be for external users. They should onl
 <p>SUG: Ther should be a mechanism that allows a patient to be suspended and a cause given. There should be a mechanism for reactivating patietns. A reactivation plan should be recorded. Perioadic reminders shoudl be snet to approprate team members to check if suspension is till approprate. The reminder mechanisme must be configureable with respect to the frequency of reminders being sent.</p>
 </div>
 <div class="section" id="outputs">
-<span id="id15"></span><h3>9.6 Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h3>
+<span id="id16"></span><h3>9.6 Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h3>
 <p>Outputs at this stage could include the mandatory periodic reporting to various bodies.</p>
 <p>In addition there could be:</p>
 <ul class="simple">
@@ -1116,11 +1175,11 @@ SUG: Template for operation data entry.</p>
 </div>
 </div>
 <div class="section" id="inputs">
-<span id="id16"></span><h3>11.2 Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h3>
+<span id="id17"></span><h3>11.2 Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h3>
 <p>Information related to the organ being transplanted along with information pertaining to the recipient.</p>
 </div>
 <div class="section" id="actors-involved">
-<span id="id17"></span><h3>11.3 Actors Involved<a class="headerlink" href="#actors-involved" title="Permalink to this headline">¶</a></h3>
+<span id="id18"></span><h3>11.3 Actors Involved<a class="headerlink" href="#actors-involved" title="Permalink to this headline">¶</a></h3>
 <p>The following perform the transplant and support this stage:</p>
 <ul class="simple">
 <li>Surgeons and juniors</li>
@@ -1130,7 +1189,7 @@ SUG: Template for operation data entry.</p>
 </ul>
 </div>
 <div class="section" id="information-generated-and-stored">
-<span id="id18"></span><h3>11.4 Information generated and stored<a class="headerlink" href="#information-generated-and-stored" title="Permalink to this headline">¶</a></h3>
+<span id="id19"></span><h3>11.4 Information generated and stored<a class="headerlink" href="#information-generated-and-stored" title="Permalink to this headline">¶</a></h3>
 <p>What information is gathered and stored as a result of this process?</p>
 <div class="section" id="nhsbt">
 <span id="nhsbt"></span><h4>NHSBT<a class="headerlink" href="#nhsbt" title="Permalink to this headline">¶</a></h4>
@@ -1169,7 +1228,7 @@ SUG: Template for operation data entry.</p>
 </div>
 </div>
 <div class="section" id="outputs">
-<span id="id19"></span><h3>11.5 Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h3>
+<span id="id20"></span><h3>11.5 Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h3>
 <p>The outputs that are generated by the transplant surgery include:</p>
 <ul class="simple">
 <li>An Operation Note</li>
@@ -1182,7 +1241,7 @@ SUG: Template for operation data entry.</p>
 </ul>
 </div>
 <div class="section" id="notes">
-<span id="id20"></span><h3>11.6 Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h3>
+<span id="id21"></span><h3>11.6 Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h3>
 <p>The operation note may be able to be automatically generated if the data necessary is entered using an appropriate system.</p>
 <p>The HTA B Form needs to be submitted. A record needs to be kept tying the HTA A Form numbers to the HTA B Form numbers for reasons of traceability. The forms are submitted to NHSBT.</p>
 <p>Electronic versions of the data along with a scanned copy of each form would aid traceability.</p>
@@ -1193,11 +1252,11 @@ SUG: Template for operation data entry.</p>
 <p>The patient is monitored post operatively to asses their progress.</p>
 <p>Insert Figure 8</p>
 <div class="section" id="inputs">
-<span id="id21"></span><h3>12.1 Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h3>
+<span id="id22"></span><h3>12.1 Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h3>
 <p>All of the information gathered by previous stages. Along with any medication information.</p>
 </div>
 <div class="section" id="actors-involved">
-<span id="id22"></span><h3>12.2 Actors involved<a class="headerlink" href="#actors-involved" title="Permalink to this headline">¶</a></h3>
+<span id="id23"></span><h3>12.2 Actors involved<a class="headerlink" href="#actors-involved" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Patients</li>
 <li>Nephrologist</li>
@@ -1206,11 +1265,11 @@ SUG: Template for operation data entry.</p>
 </ul>
 </div>
 <div class="section" id="information-generated-and-stored">
-<span id="id23"></span><h3>12.3 Information generated and stored<a class="headerlink" href="#information-generated-and-stored" title="Permalink to this headline">¶</a></h3>
+<span id="id24"></span><h3>12.3 Information generated and stored<a class="headerlink" href="#information-generated-and-stored" title="Permalink to this headline">¶</a></h3>
 <p>The results of regular measurements of blood pressure and temperature. Along with blood and urine results.</p>
 </div>
 <div class="section" id="outputs">
-<span id="id24"></span><h3>12.4 Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h3>
+<span id="id25"></span><h3>12.4 Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h3>
 <p>Recommendation that a patient can be discharged.</p>
 </div>
 </div>
@@ -1219,7 +1278,7 @@ SUG: Template for operation data entry.</p>
 <p>The patient is initially discharged with local follow-up. The local follow-up continues until the patient is discharged to the care of their referring unit. The referring unit then continues with planned follow ups at regular intervals.</p>
 <p>Insert figure 9</p>
 <div class="section" id="actors-involved">
-<span id="id25"></span><h3>13.1 Actors involved<a class="headerlink" href="#actors-involved" title="Permalink to this headline">¶</a></h3>
+<span id="id26"></span><h3>13.1 Actors involved<a class="headerlink" href="#actors-involved" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Patient</li>
 <li>Nethrologist</li>
@@ -1228,11 +1287,11 @@ SUG: Template for operation data entry.</p>
 </ul>
 </div>
 <div class="section" id="information-generated-and-stored">
-<span id="id26"></span><h3>13.2 Information generated and stored<a class="headerlink" href="#information-generated-and-stored" title="Permalink to this headline">¶</a></h3>
+<span id="id27"></span><h3>13.2 Information generated and stored<a class="headerlink" href="#information-generated-and-stored" title="Permalink to this headline">¶</a></h3>
 <p>Update patient record to indicate the patient has been discharged. In addition record the medication, if any, they are sent home with.</p>
 </div>
 <div class="section" id="outputs">
-<span id="id27"></span><h3>13.3 Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h3>
+<span id="id28"></span><h3>13.3 Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h3>
 <p>A discharge summary letter that is sent to the patient's GP. (Does this also go to the referring clinician?)</p>
 </div>
 </div>
@@ -1241,14 +1300,14 @@ SUG: Template for operation data entry.</p>
 <p>Initial follow ups are carried out locally. The responsibility for follow ups is then returned to the referring centre, which may of course be Oxford.</p>
 <p>Insert figure 10</p>
 <div class="section" id="actors-involved">
-<span id="id28"></span><h3>14.1 Actors involved<a class="headerlink" href="#actors-involved" title="Permalink to this headline">¶</a></h3>
+<span id="id29"></span><h3>14.1 Actors involved<a class="headerlink" href="#actors-involved" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Patient</li>
 <li>Nephrologist</li>
 </ul>
 </div>
 <div class="section" id="information-generated-and-stored">
-<span id="id29"></span><h3>14.2 Information generated and stored<a class="headerlink" href="#information-generated-and-stored" title="Permalink to this headline">¶</a></h3>
+<span id="id30"></span><h3>14.2 Information generated and stored<a class="headerlink" href="#information-generated-and-stored" title="Permalink to this headline">¶</a></h3>
 <p>A standard set of information is required to enable the completion of NHSBT reporting forms. This is likely to include:</p>
 <ul class="simple">
 <li>Patient demorgraphic details</li>
@@ -1259,7 +1318,7 @@ SUG: Template for operation data entry.</p>
 </ul>
 </div>
 <div class="section" id="outputs">
-<span id="id30"></span><h3>14.3 Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h3>
+<span id="id31"></span><h3>14.3 Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h3>
 <p>A regular report document for NHSBT is created at this stage.</p>
 </div>
 </div>
@@ -1363,7 +1422,7 @@ SUG: Template for operation data entry.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'v0.2.2',
+            VERSION:'v0.2.3',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
